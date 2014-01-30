@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.chart.BubbleChart?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="MyCRM.MainController">
+	<top>
+		<Label fx:id="title" text="Hello World" />
+	</top>
+	<center>
+		<VBox alignment="CENTER">
+			<Button text="About" onAction="#onBtnAbout" />
+		</VBox>
+	</center>
+	<bottom>
+		<Label fx:id="lbStatus" />
+	</bottom>
+</BorderPane>
