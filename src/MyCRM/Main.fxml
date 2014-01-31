@@ -8,7 +8,7 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="MyCRM.MainController">
 	<top>
-		<Label fx:id="title" text="Hello World" />
+		<Label fx:id="title" text="My CRM" />
 	</top>
 	<center>
 		<VBox alignment="CENTER">
