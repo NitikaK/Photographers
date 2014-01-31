@@ -13,21 +13,16 @@
 			classpathref="fxant"/>
 	</target>
 	<target name="setup-staging-area">
-		<delete dir="externalLibs" />
-		<delete dir="project" />
-		<delete dir="projectRefs" />
+		<delete dir="staging" />
 		
-		<mkdir dir="externalLibs" />
-		
-		
-		<mkdir dir="project" />
-		<copy todir="project">
+		<mkdir dir="staging/externalLibs" />
+		<mkdir dir="staging/project" />
+		<copy todir="staging/project">
 			<fileset dir="${basedir}">
 				<include name="src/**" />
 			</fileset>
 		</copy>
-		
-		<mkdir dir="projectRefs" />
+		<mkdir dir="staging/projectRefs" />
 	</target>
 	<target name='do-compile'>
 		<delete dir="build" />
@@ -37,7 +32,7 @@
 	
 		<!-- Copy project-libs references -->
 		<copy todir="build/libs">
-			<fileset dir="externalLibs">
+			<fileset dir="staging/externalLibs">
 			</fileset>
 		</copy>
 	
@@ -45,7 +40,7 @@
 	
 		<!-- Copy project sources itself -->
 		<copy todir="build/src">
-			<fileset dir="project/src">
+			<fileset dir="staging/project/src">
 				<include name="**/*"/>
 			</fileset>
 		</copy>
@@ -66,7 +61,7 @@
 		
 		<!-- Copy over none Java-Files -->
 		<copy todir="build/classes">
-		<fileset dir="project/src">
+		<fileset dir="staging/project/src">
 			<exclude name="**/*.java"/>
 		</fileset>
 		</copy>
@@ -81,14 +76,14 @@
 		<mkdir dir="dist/libs" />
 		
 		<copy todir="dist/libs">
-			<fileset dir="externalLibs">
+			<fileset dir="staging/externalLibs">
 				<include name="*" />
 			</fileset>
 		</copy>
 		
 		
 		<fx:resources id="appRes">
-			<fx:fileset dir="dist" includes="MyCRM"/>
+			<fx:fileset dir="dist" includes="MyCRM.jar"/>
 			<fx:fileset dir="dist" includes="libs/*"/>
 		</fx:resources> 
 		
