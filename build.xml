@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<project name="MyCRM" default="do-deploy" basedir="."  xmlns:fx="javafx:com.sun.javafx.tools.ant">
 	<target name="init-fx-tasks">
+		<echo message="JAVA_HOME should point the the JDK\jre, not the the plain JRE!" />
+		<echo message="JAVA_HOME=${java.home}" />
 		<path id="fxant">
 			<filelist>
 				<file name="${java.home}\..\lib\ant-javafx.jar"/>
