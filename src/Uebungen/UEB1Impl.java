@@ -4,7 +4,7 @@ import BIF.SWE2.Interfaces.IApplication;
 import BIF.SWE2.Interfaces.IUEB1;
 import MyCRM.Main;
 
-public class UEB1 implements IUEB1 {
+public class UEB1Impl implements IUEB1 {
 
 	@Override
 	public IApplication GetApplication() {

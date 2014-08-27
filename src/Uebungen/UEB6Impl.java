@@ -1,8 +1,8 @@
 package Uebungen;
 
-import BIF.SWE2.Interfaces.IUEB5;
+import BIF.SWE2.Interfaces.IUEB6;
 
-public class UEB5 implements IUEB5 {
+public class UEB6Impl implements IUEB6 {
 
 
 	@Override
