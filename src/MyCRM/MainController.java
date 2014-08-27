@@ -1,4 +1,4 @@
-package MyCRM;
+package mycrm;
 
 import java.io.IOException;
 

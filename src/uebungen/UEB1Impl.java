@@ -1,8 +1,8 @@
-package Uebungen;
+package uebungen;
 
+import mycrm.Main;
 import BIF.SWE2.Interfaces.IApplication;
 import BIF.SWE2.Interfaces.IUEB1;
-import MyCRM.Main;
 
 public class UEB1Impl implements IUEB1 {
 

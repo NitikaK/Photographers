@@ -1,4 +1,4 @@
-package Uebungen;
+package uebungen;
 
 import BIF.SWE2.Interfaces.IUEB2;
 

@@ -1,4 +1,4 @@
-package MyCRM;
+package mycrm;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

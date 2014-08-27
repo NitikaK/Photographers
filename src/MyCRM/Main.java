@@ -1,4 +1,4 @@
-package MyCRM;
+package mycrm;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
