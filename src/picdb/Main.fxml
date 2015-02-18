@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.chart.BubbleChart?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="MyCRM.MainController">
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="picdb.MainController">
 	<top>
-		<Label fx:id="title" text="My CRM" />
+		<Label fx:id="title" text="PicDB" />
 	</top>
 	<center>
 		<VBox alignment="CENTER">

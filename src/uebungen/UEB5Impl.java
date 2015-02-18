@@ -1,12 +1,12 @@
 package uebungen;
 
-import BIF.SWE2.Interfaces.IUEB5;
+import BIF.SWE2.interfaces.UEB5;
 
-public class UEB5Impl implements IUEB5 {
+public class UEB5Impl implements UEB5 {
 
 
 	@Override
-	public void HelloWorld() {
+	public void helloWorld() {
 		// I'm fine		
 	}
 }

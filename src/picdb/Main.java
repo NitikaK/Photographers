@@ -1,4 +1,4 @@
-package mycrm;
+package picdb;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -7,7 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 
 
-public class Main extends Application implements BIF.SWE2.Interfaces.IApplication {
+public class Main extends Application implements BIF.SWE2.interfaces.Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -34,7 +34,7 @@ public class Main extends Application implements BIF.SWE2.Interfaces.IApplicatio
 	}
 
 	@Override
-	public void HelloWorld() {
+	public void helloWorld() {
 		// Do nothing, this will test the junit test setup		
 	}
 }

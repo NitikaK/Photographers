@@ -1,4 +1,4 @@
-package mycrm;
+package picdb;
 
 import java.io.IOException;
 

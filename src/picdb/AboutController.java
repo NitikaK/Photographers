@@ -1,4 +1,4 @@
-package mycrm;
+package picdb;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

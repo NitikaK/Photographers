@@ -1,18 +1,18 @@
 package uebungen;
 
-import mycrm.Main;
-import BIF.SWE2.Interfaces.IApplication;
-import BIF.SWE2.Interfaces.IUEB1;
+import picdb.Main;
+import BIF.SWE2.interfaces.Application;
+import BIF.SWE2.interfaces.UEB1;
 
-public class UEB1Impl implements IUEB1 {
+public class UEB1Impl implements UEB1 {
 
 	@Override
-	public IApplication GetApplication() {
+	public Application getApplication() {
 		return new Main();
 	}
 
 	@Override
-	public void HelloWorld() {
+	public void helloWorld() {
 		// I'm fine		
 	}
 }

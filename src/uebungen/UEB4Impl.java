@@ -1,12 +1,12 @@
 package uebungen;
 
-import BIF.SWE2.Interfaces.IUEB4;
+import BIF.SWE2.interfaces.UEB4;
 
-public class UEB4Impl implements IUEB4 {
+public class UEB4Impl implements UEB4 {
 
 
 	@Override
-	public void HelloWorld() {
+	public void helloWorld() {
 		// I'm fine		
 	}
 }
