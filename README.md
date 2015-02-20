@@ -1,11 +1,11 @@
-﻿BIF/SWE 2 ?
-======================
+﻿BIF/SWE 2 PicDB
+===============
 
-Java Template für das Übungsbeispiel "?". Damit die Übung erfolgreich abgegeben werden kann müssen folgende Kriterien erfüllt sein:
+Java Template für das Übungsbeispiel "PicDB". Damit die Übung erfolgreich abgegeben werden kann müssen folgende Kriterien erfüllt sein:
 
 * Es muss eine build.xml datei vorhanden sein
 * Die build.xml muss ein JAR file nach ./deploy compilieren können
-* JEDE/R in der Gruppe muss in SEIN Repository hochladen (git push)
+* Es genügt, wenn der/die Gruppenleiter_inn abgibt (git push). Gruppen können auf https://inf-swe.technikum-wien.at/Assignment/ verwaltet werden. 
 
 Benutzen Sie bitte die Vorlage. Sie ist so vorbereitet, dass sie am Jenkins verwendet werden kann.
 
@@ -26,29 +26,23 @@ Das Repository ist selbst anzulegen:
 
 Das Repository hat die URL: https://if00x000@inf-swe-git.technikum-wien.at/?r=~if00x000/BIF-SS??-SWE2.git
 
-* if00x000 ist durch Ihre if-Nummer zu ersetzen
-* BIF-SS??-SWE2 durch das Jahr (WS 14/15 -> BIF-SS14-SWE2)
+* if00x000 ist durch Ihre uid-Nummer zu ersetzen
+* BIF-SS??-SWE2 durch das Jahr (SS 2015 -> BIF-SS15-SWE2)
 
-Sie sollten Ihr Repository Ihren KollegInnen freigeben. Mit "git add remote" (http://git-scm.com/docs/git-remote) können Sie mehrere Remotes angeben und die Abgabe somit vereinfachen.
+Sie sollten Ihr Repository Ihren KollegInnen freigeben.
 
 Setup des Projektes
 -------------------
 https://inf-swe-git.technikum-wien.at/summary/?r=BIF/SWE2-Java.git
 
-Laden Sie aus dem Template die Datei clone-bif-swe1-java-tempate.sh herunter 
+Clonen Sie das Template in ein Verzeichnis Ihrer Wahl und ändern Sie anschließend den remote/origin auf Ihr Repository
+	
+	git clone https://inf-swe-git.technikum-wien.at/r/BIF/SWE2-Java.git
+	cd SWE2-Java
+	git remote set-url origin https://if00x000@inf-swe-git.technikum-wien.at/r/~if00x000/BIF-SS??-SWE2.git
+    git push origin master
 
-https://inf-swe-git.technikum-wien.at/raw/BIF/SWE2-Java.git/master/clone-bif-swe2-java-tempate.sh
-
-Starten Sie das Script mit git-Bash oder Bash und befolgen Sie die Anweisungen
-
-    ./clone-bif-swe2-java-tempate.sh
-
-Mit den Anweisungen kopieren Sie das Template in Ihr lokales Projekt.
-
-Achten Sie bitte darauf, dass immer BEIDE abgeben:
-
-    git push all --all
-	./git-push-all.sh
+Ihr KollegeInn klonen dann Ihr Repository.
 
 
 Implementierung
