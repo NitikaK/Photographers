@@ -2,7 +2,9 @@ package uebungen;
 
 import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.UEB2;
+import BIF.SWE2.interfaces.models.CameraModel;
 import BIF.SWE2.interfaces.models.PictureModel;
+import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.MainWindowPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PicturePresentationModel;
 
@@ -17,6 +19,16 @@ public class UEB2Impl implements UEB2 {
 	@Override
 	public MainWindowPresentationModel GetMainWindowPresentationModel() {
 		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CameraModel getCameraModel(String s, String s1) {
+		return null;
+	}
+
+	@Override
+	public CameraPresentationModel getCameraPresentationModel(CameraModel cameraModel) {
 		return null;
 	}
 

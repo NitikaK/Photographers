@@ -1,22 +1,12 @@
 package uebungen;
 
+import BIF.SWE2.interfaces.models.*;
+import BIF.SWE2.interfaces.presentationmodels.*;
 import picdb.Main;
 import BIF.SWE2.interfaces.Application;
 import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.UEB1;
-import BIF.SWE2.interfaces.models.EXIFModel;
-import BIF.SWE2.interfaces.models.IPTCModel;
-import BIF.SWE2.interfaces.models.PhotographerModel;
-import BIF.SWE2.interfaces.models.PictureModel;
-import BIF.SWE2.interfaces.presentationmodels.EXIFPresentationModel;
-import BIF.SWE2.interfaces.presentationmodels.IPTCPresentationModel;
-import BIF.SWE2.interfaces.presentationmodels.MainWindowPresentationModel;
-import BIF.SWE2.interfaces.presentationmodels.PhotographerListPresentationModel;
-import BIF.SWE2.interfaces.presentationmodels.PhotographerPresentationModel;
-import BIF.SWE2.interfaces.presentationmodels.PictureListPresentationModel;
-import BIF.SWE2.interfaces.presentationmodels.PicturePresentationModel;
-import BIF.SWE2.interfaces.presentationmodels.SearchPresentationModel;
 
 public class UEB1Impl implements UEB1 {
 
@@ -85,8 +75,23 @@ public class UEB1Impl implements UEB1 {
 	}
 
 	@Override
+	public CameraModel getEmptyCameraModel() {
+		return null;
+	}
+
+	@Override
 	public PhotographerPresentationModel getEmptyPhotographerPresentationModel() {
 		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CameraListPresentationModel getEmptyCameraListPresentationModel() {
+		return null;
+	}
+
+	@Override
+	public CameraPresentationModel getEmptyCameraPresentationModel() {
 		return null;
 	}
 
