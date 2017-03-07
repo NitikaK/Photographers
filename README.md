@@ -1,11 +1,11 @@
-﻿BIF/SWE 2 PicDB
+BIF/SWE 2 PicDB
 ===============
 
 Java Template für das Übungsbeispiel "PicDB". Damit die Übung erfolgreich abgegeben werden kann müssen folgende Kriterien erfüllt sein:
 
 * Es muss eine build.xml datei vorhanden sein
 * Die build.xml muss ein JAR file nach ./deploy compilieren können
-* Es genügt, wenn der/die Gruppenleiter_inn abgibt (git push). Gruppen können auf https://inf-swe.technikum-wien.at/Assignment/ verwaltet werden. 
+* JEDE/R in der Gruppe muss in SEIN Repository hochladen (git push)
 
 Benutzen Sie bitte die Vorlage. Sie ist so vorbereitet, dass sie am Jenkins verwendet werden kann.
 
@@ -28,8 +28,6 @@ Das Repository hat die URL: https://if00x000@inf-swe-git.technikum-wien.at/?r=~i
 
 * if00x000 ist durch Ihre uid-Nummer zu ersetzen
 * BIF-SS??-SWE2 durch das Jahr (SS 2015 -> BIF-SS15-SWE2)
-
-Sie sollten Ihr Repository Ihren KollegInnen freigeben.
 
 Setup des Projektes
 -------------------
