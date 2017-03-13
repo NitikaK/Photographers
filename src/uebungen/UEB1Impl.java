@@ -2,7 +2,7 @@ package uebungen;
 
 import BIF.SWE2.interfaces.models.*;
 import BIF.SWE2.interfaces.presentationmodels.*;
-import picdb.Main;
+import picdb.*;
 import BIF.SWE2.interfaces.Application;
 import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.DataAccessLayer;
@@ -21,102 +21,105 @@ public class UEB1Impl implements UEB1 {
 	}
 
 	@Override
-	public DataAccessLayer getAnyDataAccessLayer() {
-		// TODO Auto-generated method stub
-		return null;
+	public DataAccessLayer getAnyDataAccessLayer()
+	{
+		return new PicDataAccesslayer();
 	}
 
 	@Override
-	public BusinessLayer getBusinessLayer() {
-		// TODO Auto-generated method stub
-		return null;
+	public BusinessLayer getBusinessLayer()
+	{
+		return new PicBusinessLayer();
 	}
 
 	@Override
-	public EXIFModel getEmptyEXIFModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public EXIFModel getEmptyEXIFModel()
+	{
+		return new PicEXIFModel();
 	}
 
 	@Override
-	public EXIFPresentationModel getEmptyEXIFPresentationModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public EXIFPresentationModel getEmptyEXIFPresentationModel()
+	{
+		return new PicEXIFPresentationModel();
 	}
 
 	@Override
-	public IPTCModel getEmptyIPTCModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public IPTCModel getEmptyIPTCModel()
+	{
+		return new PicIPTCModel();
 	}
 
 	@Override
-	public IPTCPresentationModel getEmptyIPTCPresentationModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public IPTCPresentationModel getEmptyIPTCPresentationModel()
+	{
+		return new PicIPTCPresentationModel();
 	}
 
 	@Override
-	public MainWindowPresentationModel getEmptyMainWindowPresentationModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public MainWindowPresentationModel getEmptyMainWindowPresentationModel()
+	{
+		return new PicMainWindowPresentationModel();
 	}
 
 	@Override
-	public PhotographerListPresentationModel getEmptyPhotographerListPresentationModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public PhotographerListPresentationModel getEmptyPhotographerListPresentationModel()
+	{
+		return new PicPhotographerListPresentationModel();
 	}
 
 	@Override
-	public PhotographerModel getEmptyPhotographerModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public PhotographerModel getEmptyPhotographerModel()
+	{
+		return new PicPhotographerModel();
 	}
 
 	@Override
-	public CameraModel getEmptyCameraModel() {
-		return null;
+	public CameraModel getEmptyCameraModel()
+	{
+		return new PicCameraModel();
 	}
 
 	@Override
-	public PhotographerPresentationModel getEmptyPhotographerPresentationModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public PhotographerPresentationModel getEmptyPhotographerPresentationModel()
+	{
+		return new PicPhotographerPresentationModel();
 	}
 
 	@Override
-	public CameraListPresentationModel getEmptyCameraListPresentationModel() {
-		return null;
+	public CameraListPresentationModel getEmptyCameraListPresentationModel()
+	{
+		return new PicCameraListPresentationModel();
 	}
 
 	@Override
-	public CameraPresentationModel getEmptyCameraPresentationModel() {
-		return null;
+	public CameraPresentationModel getEmptyCameraPresentationModel()
+	{
+		return new PicCameraPresentationModel();
 	}
 
 	@Override
-	public PictureListPresentationModel getEmptyPictureListPresentationModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public PictureListPresentationModel getEmptyPictureListPresentationModel()
+	{
+		return new PicPictureListPresentationModel();
 	}
 
 	@Override
-	public PictureModel getEmptyPictureModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public PictureModel getEmptyPictureModel()
+	{
+		return new PicPictureModel();
 	}
 
 	@Override
-	public PicturePresentationModel getEmptyPicturePresentationModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public PicturePresentationModel getEmptyPicturePresentationModel()
+	{
+		return new PicPicturePresentationModel();
 	}
 
 	@Override
-	public SearchPresentationModel getEmptySearchPresentationModel() {
-		// TODO Auto-generated method stub
-		return null;
+	public SearchPresentationModel getEmptySearchPresentationModel()
+	{
+		return new PicSearchPresentationModel();
 	}
 
 	@Override
