@@ -9,6 +9,17 @@ import BIF.SWE2.interfaces.presentationmodels.EXIFPresentationModel;
  */
 public class PicEXIFPresentationModel implements EXIFPresentationModel
 {
+    private String make;
+    private double fnNumber;
+    private double exposureTime;
+    private double isoValue;
+    private boolean flash;
+    private String exposureProgram;
+    private String exposureProgramResource;
+    private CameraPresentationModel camera;
+    private ISORatings isoRating;
+    private String isoRatingResource;
+
     @Override
     public String getMake()
     {
@@ -54,13 +65,13 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
     @Override
     public CameraPresentationModel getCamera()
     {
-        return null;
+        return this.camera;
     }
 
     @Override
     public void setCamera(CameraPresentationModel cameraPresentationModel)
     {
-
+        this.camera = cameraPresentationModel;
     }
 
     @Override

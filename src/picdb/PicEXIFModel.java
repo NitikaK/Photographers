@@ -8,6 +8,7 @@ import BIF.SWE2.interfaces.models.EXIFModel;
  */
 public class PicEXIFModel implements EXIFModel
 {
+
     @Override
     public String getMake()
     {

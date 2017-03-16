@@ -1,5 +1,7 @@
 package picdb;
 
+import BIF.SWE2.interfaces.models.CameraModel;
+import BIF.SWE2.interfaces.models.PictureModel;
 import BIF.SWE2.interfaces.presentationmodels.*;
 
 /**
@@ -7,6 +9,28 @@ import BIF.SWE2.interfaces.presentationmodels.*;
  */
 public class PicPicturePresentationModel implements PicturePresentationModel
 {
+    private int id;
+    private String fileName;
+    private String filePath;
+    private IPTCPresentationModel iptc;
+    private EXIFPresentationModel exif;
+    private PhotographerPresentationModel photographer;
+    private CameraPresentationModel camera;
+    private PictureModel pictureModel;
+
+    public PicPicturePresentationModel()
+    {
+
+    }
+
+    public PicPicturePresentationModel(PictureModel pictureModel)
+    {
+        this.pictureModel = pictureModel;
+        this.fileName = pictureModel.getFileName();
+        this.iptc = new PicIPTCPresentationModel();
+        this.exif = new PicEXIFPresentationModel();
+    }
+
     @Override
     public int getID()
     {
@@ -16,42 +40,43 @@ public class PicPicturePresentationModel implements PicturePresentationModel
     @Override
     public String getFileName()
     {
-        return null;
+        return this.fileName;
     }
 
     @Override
     public String getFilePath()
     {
-        return null;
+        return this.filePath;
     }
 
     @Override
     public String getDisplayName()
     {
-        return null;
+        return fileName + " (by hans)";
     }
 
     @Override
     public IPTCPresentationModel getIPTC()
     {
-        return null;
+        return this.iptc;
     }
 
     @Override
     public EXIFPresentationModel getEXIF()
     {
-        return null;
+        return this.exif;
     }
 
     @Override
     public PhotographerPresentationModel getPhotographer()
     {
-        return null;
+        return this.photographer;
     }
 
     @Override
     public CameraPresentationModel getCamera()
     {
-        return null;
+        this.camera = new PicCameraPresentationModel(this.pictureModel.getCamera());
+        return this.camera;
     }
 }
