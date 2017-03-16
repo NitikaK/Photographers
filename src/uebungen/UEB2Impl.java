@@ -7,7 +7,10 @@ import BIF.SWE2.interfaces.models.PictureModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.MainWindowPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PicturePresentationModel;
+import picdb.PicCameraModel;
+import picdb.PicCameraPresentationModel;
 import picdb.PicMainWindowPresentationModel;
+import picdb.PicPictureModel;
 
 public class UEB2Impl implements UEB2 {
 
@@ -26,12 +29,13 @@ public class UEB2Impl implements UEB2 {
 	@Override
 	public CameraModel getCameraModel(String s, String s1)
 	{
-		return null;
+		return new PicCameraModel(s,s1);
 	}
 
 	@Override
-	public CameraPresentationModel getCameraPresentationModel(CameraModel cameraModel) {
-		return null;
+	public CameraPresentationModel getCameraPresentationModel(CameraModel cameraModel)
+	{
+		return new PicCameraPresentationModel(cameraModel);
 	}
 
 	@Override
@@ -41,9 +45,9 @@ public class UEB2Impl implements UEB2 {
 	}
 
 	@Override
-	public PictureModel getPictureModel(String arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public PictureModel getPictureModel(String arg0)
+	{
+		return new PicPictureModel(arg0);
 	}
 
 	@Override

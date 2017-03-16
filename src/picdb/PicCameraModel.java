@@ -9,6 +9,25 @@ import java.time.LocalDate;
  */
 public class PicCameraModel implements CameraModel
 {
+    private Integer id;
+    private String producer;
+    private String make;
+    private LocalDate boughtOn;
+    private String notes;
+    private double isoLimitGood;
+    private double isoLimitAcceptable;
+
+    public PicCameraModel(String producer, String make)
+    {
+        this.producer = producer;
+        this.make = make;
+    }
+
+    public PicCameraModel()
+    {
+
+    }
+
     @Override
     public int getID()
     {
@@ -24,49 +43,49 @@ public class PicCameraModel implements CameraModel
     @Override
     public String getProducer()
     {
-        return null;
+        return this.producer;
     }
 
     @Override
     public void setProducer(String s)
     {
-
+        this.producer = s;
     }
 
     @Override
     public String getMake()
     {
-        return null;
+        return this.make;
     }
 
     @Override
     public void setMake(String s)
     {
-
+        this.make = s;
     }
 
     @Override
     public LocalDate getBoughtOn()
     {
-        return null;
+        return this.boughtOn;
     }
 
     @Override
     public void setBoughtOn(LocalDate localDate)
     {
-
+        this.boughtOn = localDate;
     }
 
     @Override
     public String getNotes()
     {
-        return null;
+        return this.notes;
     }
 
     @Override
     public void setNotes(String s)
     {
-
+        this.notes = s;
     }
 
     @Override
@@ -78,7 +97,7 @@ public class PicCameraModel implements CameraModel
     @Override
     public void setISOLimitGood(double v)
     {
-
+        this.isoLimitGood = v;
     }
 
     @Override
@@ -90,6 +109,6 @@ public class PicCameraModel implements CameraModel
     @Override
     public void setISOLimitAcceptable(double v)
     {
-
+        this.isoLimitAcceptable = v;
     }
 }

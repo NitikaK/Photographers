@@ -1,6 +1,7 @@
 package picdb;
 
 import BIF.SWE2.interfaces.ISORatings;
+import BIF.SWE2.interfaces.models.CameraModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 
 import java.time.LocalDate;
@@ -10,6 +11,28 @@ import java.time.LocalDate;
  */
 public class PicCameraPresentationModel implements CameraPresentationModel
 {
+    private int id;
+    private String producer;
+    private String make;
+    private LocalDate boughtOn;
+    private String notes;
+    private String validationSummary;
+    private int numberOfPictures;
+    private double isoLimitGood;
+    private double isoLimitAcceptable;
+
+    public PicCameraPresentationModel(CameraModel model)
+    {
+        this.producer = model.getProducer();
+        this.make = model.getMake();
+
+    }
+
+    public PicCameraPresentationModel()
+    {
+        //forever empty :(
+    }
+
     @Override
     public int getID()
     {
@@ -19,55 +42,55 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public String getProducer()
     {
-        return null;
+        return this.producer;
     }
 
     @Override
     public void setProducer(String s)
     {
-
+        this.producer = s;
     }
 
     @Override
     public String getMake()
     {
-        return null;
+        return this.make;
     }
 
     @Override
     public void setMake(String s)
     {
-
+        this.make = s;
     }
 
     @Override
     public LocalDate getBoughtOn()
     {
-        return null;
+        return this.boughtOn;
     }
 
     @Override
     public void setBoughtOn(LocalDate localDate)
     {
-
+        this.boughtOn = localDate;
     }
 
     @Override
     public String getNotes()
     {
-        return null;
+        return this.notes;
     }
 
     @Override
     public void setNotes(String s)
     {
-
+        this.notes = s;
     }
 
     @Override
     public int getNumberOfPictures()
     {
-        return 0;
+        return this.numberOfPictures;
     }
 
     @Override
@@ -79,7 +102,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public String getValidationSummary()
     {
-        return null;
+        return this.validationSummary;
     }
 
     @Override
@@ -109,7 +132,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public void setISOLimitGood(double v)
     {
-
+        this.isoLimitGood = v;
     }
 
     @Override
@@ -121,7 +144,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public void setISOLimitAcceptable(double v)
     {
-
+        this.isoLimitAcceptable = v;
     }
 
     @Override
