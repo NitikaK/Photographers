@@ -5,26 +5,45 @@ import BIF.SWE2.interfaces.presentationmodels.PictureListPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PicturePresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.SearchPresentationModel;
 
-/**
- * Created by gomgom on 12/03/2017.
- */
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
+
 public class PicMainWindowPresentationModel implements MainWindowPresentationModel
 {
+
+    public PicMainWindowPresentationModel()
+    {
+        searchPresentationModel = new PicSearchPresentationModel();
+        //pList = new LinkedList<PicPictureListPresentationModel>();
+        pictureListPresentationModel = new PicPictureListPresentationModel();
+    }
+
     @Override
     public PicturePresentationModel getCurrentPicture()
     {
-        return null;
+        if (this.currentPicture == null)
+        {
+            return null;
+        }
+        else return this.currentPicture;
     }
 
     @Override
     public PictureListPresentationModel getList()
     {
-        return null;
+        return this.pictureListPresentationModel;
     }
 
     @Override
     public SearchPresentationModel getSearch()
     {
-        return null;
+        return this.searchPresentationModel;
     }
+
+    private PicPicturePresentationModel currentPicture = null;
+    private PicSearchPresentationModel searchPresentationModel = null;
+    private Collection<PicPictureListPresentationModel> pList = null;
+    //only for the unit test
+    private PicPictureListPresentationModel pictureListPresentationModel = null;
 }
