@@ -3,17 +3,30 @@ package picdb;
 import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.models.*;
 
+import java.io.File;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.LinkedList;
 
 /**
  * Created by gomgom on 12/03/2017.
  */
 public class PicBusinessLayer implements BusinessLayer
 {
+    private Collection pictures = new LinkedList<PictureModel>();
+    private Collection<PhotographerModel> photographers;
+    private Collection<CameraModel> cameras;
+
+
+    public PicBusinessLayer()
+    {
+        File photoDir = new File("photos");
+    }
+
     @Override
     public Collection<PictureModel> getPictures() throws Exception
     {
-        return null;
+        return this.pictures;
     }
 
     @Override
@@ -43,6 +56,11 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public void sync() throws Exception
     {
+        File picFolder = new File("./Pictures");
+        for (File f: picFolder.listFiles())
+        {
+            pictures.add(f);
+        }
 
     }
 

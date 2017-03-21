@@ -38,7 +38,7 @@ public class UEB2Impl implements UEB2 {
 	@Override
 	public BusinessLayer getBusinessLayer()
 	{
-		return null;
+		return new PicBusinessLayer();
 	}
 
 	@Override
