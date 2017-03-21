@@ -29,7 +29,7 @@ public class PicPictureModel implements PictureModel
     @Override
     public int getID()
     {
-        return 0;
+        return this.id;
     }
 
     @Override

@@ -13,14 +13,16 @@ import java.util.LinkedList;
  */
 public class PicBusinessLayer implements BusinessLayer
 {
-    private Collection pictures = new LinkedList<PictureModel>();
-    private Collection<PhotographerModel> photographers;
-    private Collection<CameraModel> cameras;
+    private Collection pictures;
+    private Collection photographers;
+    private Collection cameras;
 
 
     public PicBusinessLayer()
     {
-        File photoDir = new File("photos");
+        this.pictures = new LinkedList<PictureModel>();
+        this.photographers = new LinkedList<PhotographerModel>();
+        this.cameras = new LinkedList<CameraModel>();
     }
 
     @Override
@@ -32,12 +34,16 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public Collection<PictureModel> getPictures(String s, PhotographerModel photographerModel, IPTCModel iptcModel, EXIFModel exifModel) throws Exception
     {
-        return null;
+        return this.pictures;
     }
 
     @Override
     public PictureModel getPicture(int i) throws Exception
     {
+        /*for (int j = 0; j < pictures.size(); j++)
+        {
+            if(this.pictures)
+        }*/
         return null;
     }
 
@@ -67,7 +73,7 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public Collection<PhotographerModel> getPhotographers() throws Exception
     {
-        return null;
+        return this.photographers;
     }
 
     @Override
