@@ -1,6 +1,7 @@
 package picdb;
 
 import BIF.SWE2.interfaces.BusinessLayer;
+import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.models.*;
 
 import java.io.File;
@@ -16,6 +17,7 @@ public class PicBusinessLayer implements BusinessLayer
     private Collection pictures;
     private Collection photographers;
     private Collection cameras;
+    private DataAccessLayer dal;
 
 
     public PicBusinessLayer()

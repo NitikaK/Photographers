@@ -9,63 +9,69 @@ import java.time.LocalDate;
  */
 public class PicPhotographerModel implements PhotographerModel
 {
+    private int id;
+    private String firstName;
+    private String lastName;
+    private LocalDate birthDay;
+    private String notes;
+
     @Override
     public int getID()
     {
-        return 0;
+        return id;
     }
 
     @Override
-    public void setID(int i)
+    public void setID(int id)
     {
-
+        this.id = id;
     }
 
     @Override
     public String getFirstName()
     {
-        return null;
+        return firstName;
     }
 
     @Override
-    public void setFirstName(String s)
+    public void setFirstName(String firstName)
     {
-
+        this.firstName = firstName;
     }
 
     @Override
     public String getLastName()
     {
-        return null;
+        return lastName;
     }
 
     @Override
-    public void setLastName(String s)
+    public void setLastName(String lastName)
     {
-
+        this.lastName = lastName;
     }
 
     @Override
     public LocalDate getBirthDay()
     {
-        return null;
+        return birthDay;
     }
 
     @Override
-    public void setBirthDay(LocalDate localDate)
+    public void setBirthDay(LocalDate birthDay)
     {
-
+        this.birthDay = birthDay;
     }
 
     @Override
     public String getNotes()
     {
-        return null;
+        return notes;
     }
 
     @Override
-    public void setNotes(String s)
+    public void setNotes(String notes)
     {
-
+        this.notes = notes;
     }
 }

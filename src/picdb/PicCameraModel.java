@@ -31,13 +31,13 @@ public class PicCameraModel implements CameraModel
     @Override
     public int getID()
     {
-        return 0;
+        return this.id;
     }
 
     @Override
     public void setID(int i)
     {
-
+        this.id = i;
     }
 
     @Override
@@ -91,7 +91,7 @@ public class PicCameraModel implements CameraModel
     @Override
     public double getISOLimitGood()
     {
-        return 0;
+        return this.isoLimitGood;
     }
 
     @Override
@@ -103,7 +103,7 @@ public class PicCameraModel implements CameraModel
     @Override
     public double getISOLimitAcceptable()
     {
-        return 0;
+        return this.isoLimitAcceptable;
     }
 
     @Override

@@ -33,9 +33,9 @@ public class PicDataAccesslayer implements DataAccessLayer
         mockPic.setEXIF(exifMock);
         this.pictures.add(mockPic);
 
-        PhotographerModel mockPhoto = new PicPhotographerModel();
-        mockPhoto.setID(1234);
-        this.photographers.add(mockPhoto);
+        PhotographerModel mockPhotographer = new PicPhotographerModel();
+        mockPhotographer.setID(1234);
+        this.photographers.add(mockPhotographer);
 
         CameraModel mockCam = new PicCameraModel();
         mockCam.setID(1234);
@@ -82,11 +82,11 @@ public class PicDataAccesslayer implements DataAccessLayer
     @Override
     public PhotographerModel getPhotographer(int i) throws Exception
     {
-        for (PhotographerModel photographer: photographers)
+        for (PhotographerModel p: photographers)
         {
-            if (photographer.getID() == i)
+            if (p.getID() == i)
             {
-                return photographer;
+                return p;
             }
         }
         return null;
@@ -101,6 +101,13 @@ public class PicDataAccesslayer implements DataAccessLayer
     @Override
     public void deletePhotographer(int i) throws Exception
     {
+        for (PhotographerModel p: photographers)
+        {
+            if (p.getID() == i)
+            {
+                photographers.remove(p);
+            }
+        }
 
     }
 
