@@ -108,6 +108,7 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public EXIFModel extractEXIF(String s) throws Exception
     {
+
         return null;
     }
 
