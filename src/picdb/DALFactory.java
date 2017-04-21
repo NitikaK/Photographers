@@ -14,7 +14,7 @@ public class DALFactory
         switch (dalType)
         {
             case "mockDAL":
-                //dal = new MockDataAccessLayer();TODO
+                dal = new MockDataAccessLayer();
                 break;
 
             case "picDAL":

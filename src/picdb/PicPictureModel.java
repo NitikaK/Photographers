@@ -1,9 +1,6 @@
 package picdb;
 
-import BIF.SWE2.interfaces.models.CameraModel;
-import BIF.SWE2.interfaces.models.EXIFModel;
-import BIF.SWE2.interfaces.models.IPTCModel;
-import BIF.SWE2.interfaces.models.PictureModel;
+import BIF.SWE2.interfaces.models.*;
 
 /**
  * Created by gomgom on 12/03/2017.
@@ -15,6 +12,7 @@ public class PicPictureModel implements PictureModel
     private IPTCModel iptc;
     private EXIFModel exif;
     private CameraModel camera;
+    private PhotographerModel photographer;
 
     public PicPictureModel(String file)
     {
@@ -24,6 +22,16 @@ public class PicPictureModel implements PictureModel
     public PicPictureModel()
     {
 
+    }
+
+    public PhotographerModel getPhotographer()
+    {
+        return photographer;
+    }
+
+    public void setPhotographer(PhotographerModel photographer)
+    {
+        this.photographer = photographer;
     }
 
     @Override

@@ -14,51 +14,54 @@ import java.util.LinkedList;
  */
 public class PicBusinessLayer implements BusinessLayer
 {
-    private Collection pictures;
-    private Collection photographers;
-    private Collection cameras;
-    private DataAccessLayer dal;
 
+    private Collection<PictureModel> pictures;
+    //private Collection<PhotographerModel> photographers;
+    //private Collection<CameraModel> cameras;
+
+    private DataAccessLayer dal;
 
     public PicBusinessLayer()
     {
-        this.pictures = new LinkedList<PictureModel>();
-        this.photographers = new LinkedList<PhotographerModel>();
-        this.cameras = new LinkedList<CameraModel>();
+
+        this.pictures = new LinkedList();
+        //this.photographers = new LinkedList();
+        //this.cameras = new LinkedList();
+
+        DALFactory factory = new DALFactory();
+        this.dal = factory.getDAL("mockDAL");
     }
+
+
 
     @Override
     public Collection<PictureModel> getPictures() throws Exception
     {
-        return this.pictures;
+        return dal.getPictures(null, null, null, null);
     }
 
     @Override
     public Collection<PictureModel> getPictures(String s, PhotographerModel photographerModel, IPTCModel iptcModel, EXIFModel exifModel) throws Exception
     {
-        return this.pictures;
+        return dal.getPictures(s, photographerModel, iptcModel, exifModel);
     }
 
     @Override
     public PictureModel getPicture(int i) throws Exception
     {
-        /*for (int j = 0; j < pictures.size(); j++)
-        {
-            if(this.pictures)
-        }*/
-        return null;
+        return dal.getPicture(i);
     }
 
     @Override
     public void save(PictureModel pictureModel) throws Exception
     {
-
+        dal.save(pictureModel);
     }
 
     @Override
     public void deletePicture(int i) throws Exception
     {
-
+        dal.deletePicture(i);
     }
 
     @Override
@@ -67,7 +70,7 @@ public class PicBusinessLayer implements BusinessLayer
         File picFolder = new File("./Pictures");
         for (File f: picFolder.listFiles())
         {
-            pictures.add(f);
+            //pictures.add(f); TODO
         }
 
     }
@@ -75,25 +78,25 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public Collection<PhotographerModel> getPhotographers() throws Exception
     {
-        return this.photographers;
+        return dal.getPhotographers();
     }
 
     @Override
     public PhotographerModel getPhotographer(int i) throws Exception
     {
-        return null;
+        return dal.getPhotographer(i);
     }
 
     @Override
     public void save(PhotographerModel photographerModel) throws Exception
     {
-
+        dal.save(photographerModel);
     }
 
     @Override
     public void deletePhotographer(int i) throws Exception
     {
-
+        dal.deletePhotographer(i);
     }
 
     @Override
@@ -117,12 +120,12 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public Collection<CameraModel> getCameras()
     {
-        return null;
+        return dal.getCameras();
     }
 
     @Override
     public CameraModel getCamera(int i)
     {
-        return null;
+        return dal.getCamera(i);
     }
 }

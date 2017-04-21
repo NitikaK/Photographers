@@ -4,6 +4,7 @@ import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.UEB3;
 import BIF.SWE2.interfaces.presentationmodels.SearchPresentationModel;
+import picdb.DALFactory;
 import picdb.PicBusinessLayer;
 import picdb.PicDataAccesslayer;
 import picdb.PicSearchPresentationModel;
@@ -25,7 +26,9 @@ public class UEB3Impl implements UEB3 {
     @Override
     public DataAccessLayer getDataAccessLayer()
     {
-        return new PicDataAccesslayer();
+        DALFactory dalFactory = new DALFactory();
+        DataAccessLayer mockDAL = dalFactory.getDAL("mockDAL");
+        return mockDAL;
     }
 
     @Override

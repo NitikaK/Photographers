@@ -1,8 +1,11 @@
 package picdb;
 
 import BIF.SWE2.interfaces.models.PhotographerModel;
+import BIF.SWE2.interfaces.models.PictureModel;
 
 import java.time.LocalDate;
+import java.util.Collection;
+import java.util.LinkedList;
 
 /**
  * Created by gomgom on 12/03/2017.
@@ -14,6 +17,17 @@ public class PicPhotographerModel implements PhotographerModel
     private String lastName;
     private LocalDate birthDay;
     private String notes;
+    private Collection<PictureModel> pictures;
+
+    public PicPhotographerModel()
+    {
+        pictures = new LinkedList<>();
+    }
+
+    public void addPicture(PictureModel pic)
+    {
+        this.pictures.add(pic);
+    }
 
     @Override
     public int getID()
