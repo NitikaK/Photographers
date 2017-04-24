@@ -27,8 +27,13 @@ public class MockDataAccessLayer implements DataAccessLayer
     private void createMockData()
     {
         PictureModel mockPic = new PicPictureModel();
+        mockPic.setFileName("Img1.jpg");
         mockPic.setID(1234);
         EXIFModel exifMock = new PicEXIFModel();
+        exifMock.setMake("NiceCam");
+        exifMock.setExposureTime(23.12);
+        exifMock.setFNumber(23.12);
+        exifMock.setISOValue(23.12);
         mockPic.setEXIF(exifMock);
         this.pictures.add(mockPic);
 
@@ -44,7 +49,7 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public Collection<PictureModel> getPictures(String s, PhotographerModel photographerModel, IPTCModel iptcModel, EXIFModel exifModel) throws Exception
     {
-        if(s == null && photographerModel == null && iptcModel == null && exifModel == null)
+        if(s == null || photographerModel == null || iptcModel == null || exifModel == null)
         {
             //return all pictures
             return this.pictures;

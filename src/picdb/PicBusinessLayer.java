@@ -15,7 +15,7 @@ import java.util.LinkedList;
 public class PicBusinessLayer implements BusinessLayer
 {
 
-    private Collection<PictureModel> pictures;
+    private Collection pictures = new LinkedList<PictureModel>();
     //private Collection<PhotographerModel> photographers;
     //private Collection<CameraModel> cameras;
 
@@ -23,8 +23,6 @@ public class PicBusinessLayer implements BusinessLayer
 
     public PicBusinessLayer()
     {
-
-        this.pictures = new LinkedList();
         //this.photographers = new LinkedList();
         //this.cameras = new LinkedList();
 
@@ -37,7 +35,8 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public Collection<PictureModel> getPictures() throws Exception
     {
-        return dal.getPictures(null, null, null, null);
+        return this.pictures;
+        //return dal.getPictures(null, null, null, null);
     }
 
     @Override
@@ -70,7 +69,7 @@ public class PicBusinessLayer implements BusinessLayer
         File picFolder = new File("./Pictures");
         for (File f: picFolder.listFiles())
         {
-            //pictures.add(f); TODO
+            pictures.add(f);
         }
 
     }
@@ -108,8 +107,11 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public EXIFModel extractEXIF(String s) throws Exception
     {
+        LinkedList<PictureModel> tempPics = (LinkedList<PictureModel>) dal.getPictures(s, null, null, null);
 
-        return null;
+        EXIFModel tempExif = tempPics.get(0).getEXIF();
+        return tempExif;
+
     }
 
     @Override

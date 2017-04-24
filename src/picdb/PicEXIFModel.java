@@ -8,76 +8,82 @@ import BIF.SWE2.interfaces.models.EXIFModel;
  */
 public class PicEXIFModel implements EXIFModel
 {
+    private String make;
+    private double fNumber;
+    private double exposureTime;
+    private double isoValue;
+    private boolean flash;
+    private ExposurePrograms exposurePrograms;
 
     @Override
     public String getMake()
     {
-        return null;
+        return make;
     }
 
     @Override
-    public void setMake(String s)
+    public void setMake(String make)
     {
-
+        this.make = make;
     }
 
     @Override
     public double getFNumber()
     {
-        return 0;
+        return fNumber;
     }
 
     @Override
-    public void setFNumber(double v)
+    public void setFNumber(double fNumber)
     {
-
+        this.fNumber = fNumber;
     }
 
     @Override
     public double getExposureTime()
     {
-        return 0;
+        return exposureTime;
     }
 
     @Override
-    public void setExposureTime(double v)
+    public void setExposureTime(double exposureTime)
     {
-
+        this.exposureTime = exposureTime;
     }
 
     @Override
     public double getISOValue()
     {
-        return 0;
+        return isoValue;
     }
 
     @Override
-    public void setISOValue(double v)
+    public void setISOValue(double isoValue)
     {
-
+        this.isoValue = isoValue;
     }
 
     @Override
     public boolean getFlash()
     {
-        return false;
+        return flash;
     }
 
     @Override
-    public void setFlash(boolean b)
+    public void setFlash(boolean flash)
     {
-
+        this.flash = flash;
     }
 
     @Override
     public ExposurePrograms getExposureProgram()
     {
-        return null;
+        return exposurePrograms;
     }
 
     @Override
     public void setExposureProgram(ExposurePrograms exposurePrograms)
     {
-
+        this.exposurePrograms = exposurePrograms;
     }
 }
