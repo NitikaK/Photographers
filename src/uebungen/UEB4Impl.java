@@ -8,6 +8,9 @@ import BIF.SWE2.interfaces.models.IPTCModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.EXIFPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.IPTCPresentationModel;
+import picdb.PicEXIFModel;
+import picdb.PicEXIFPresentationModel;
+import picdb.PicIPTCModel;
 
 public class UEB4Impl implements UEB4 {
 
@@ -24,18 +27,21 @@ public class UEB4Impl implements UEB4 {
 	}
 
 	@Override
-	public EXIFModel getEmptyEXIFModel() {
-		return null;
+	public EXIFModel getEmptyEXIFModel()
+	{
+		return new PicEXIFModel();
 	}
 
 	@Override
-	public EXIFPresentationModel getEXIFPresentationModel(EXIFModel exifModel) {
-		return null;
+	public EXIFPresentationModel getEXIFPresentationModel(EXIFModel exifModel)
+	{
+		return new PicEXIFPresentationModel();
 	}
 
 	@Override
-	public IPTCModel getEmptyIPTCModel() {
-		return null;
+	public IPTCModel getEmptyIPTCModel()
+	{
+		return new PicIPTCModel();
 	}
 
 	@Override

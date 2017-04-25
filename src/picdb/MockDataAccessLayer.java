@@ -4,55 +4,69 @@ import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.models.*;
 
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedList;
 
-/**
- * Created by gomgom on 21/04/2017.
- */
 public class MockDataAccessLayer implements DataAccessLayer
 {
 
-    private Collection<PictureModel> pictures;
-    private Collection<PhotographerModel> photographers;
-    private Collection<CameraModel> cameras;
+    private HashMap<Integer, PictureModel> pictures;
+    private HashMap<Integer, PhotographerModel> photographers;
+    private HashMap<Integer, CameraModel> cameras;
 
     public MockDataAccessLayer()
     {
-        this.pictures = new LinkedList();
-        this.photographers = new LinkedList();
-        this.cameras = new LinkedList();
+        this.pictures = new HashMap<>();
+        this.photographers = new HashMap<>();
+        this.cameras = new HashMap<>();
         createMockData();
     }
 
     private void createMockData()
     {
-        PictureModel mockPic = new PicPictureModel();
-        mockPic.setFileName("Img1.jpg");
-        mockPic.setID(1234);
-        EXIFModel exifMock = new PicEXIFModel();
-        exifMock.setMake("NiceCam");
-        exifMock.setExposureTime(23.12);
-        exifMock.setFNumber(23.12);
-        exifMock.setISOValue(23.12);
-        mockPic.setEXIF(exifMock);
-        this.pictures.add(mockPic);
+        int pictureId = 1234;
+        int photographerId = 1234;
+        int cameraId = 1234;
 
-        PhotographerModel mockPhotographer = new PicPhotographerModel();
-        mockPhotographer.setID(1234);
-        this.photographers.add(mockPhotographer);
+        for (int i = 0; i < 10; i++)
+        {
+            PictureModel mockPic = new PicPictureModel();
+            mockPic.setFileName("Img" + i + "jpg");
+            mockPic.setID(photographerId);
+            EXIFModel exifMock = new PicEXIFModel();
+            exifMock.setMake("NiceCam");
+            exifMock.setExposureTime(23.12);
+            exifMock.setFNumber(23.12);
+            exifMock.setISOValue(23.12);
+            mockPic.setEXIF(exifMock);
+            this.pictures.put(i, mockPic);
+            pictureId++;
+        }
 
-        CameraModel mockCam = new PicCameraModel();
-        mockCam.setID(1234);
-        this.cameras.add(mockCam);
+        for (int i = 0; i < 10; i++)
+        {
+            PhotographerModel mockPhotographer = new PicPhotographerModel();
+            mockPhotographer.setID(photographerId);
+            this.photographers.put(i, mockPhotographer);
+            photographerId++;
+        }
+
+        for (int i = 0; i < 10; i++)
+        {
+            CameraModel mockCam = new PicCameraModel();
+            mockCam.setID(cameraId);
+            this.cameras.put(i, mockCam);
+            cameraId++;
+        }
     }
 
     @Override
     public Collection<PictureModel> getPictures(String s, PhotographerModel photographerModel, IPTCModel iptcModel, EXIFModel exifModel) throws Exception
     {
-        if(s == null || photographerModel == null || iptcModel == null || exifModel == null)
+        if((s == null || "" .equals(s)) && photographerModel == null && iptcModel == null && exifModel == null)
         {
             //return all pictures
-            return this.pictures;
+            return this.pictures.values();
         }
         else
         {
@@ -61,9 +75,9 @@ public class MockDataAccessLayer implements DataAccessLayer
 
             Collection<PictureModel> tempList = new LinkedList<>();
 
-            for (PictureModel p: pictures)
+            for (PictureModel p: pictures.values())
             {
-                if (p.getFileName().equals(s) && p.getIPTC() == iptcModel && p.getEXIF() == exifModel)
+                if (p.getFileName().equals(s) || p.getIPTC() == iptcModel || p.getEXIF() == exifModel)
                 {
                     tempList.add(p);
                 }
@@ -77,7 +91,7 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public PictureModel getPicture(int i) throws Exception
     {
-        for (PictureModel pic : pictures)
+        for (PictureModel pic : pictures.values())
         {
             if (pic.getID() == i)
             {
@@ -90,31 +104,34 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public void save(PictureModel pictureModel) throws Exception
     {
-        pictures.add(pictureModel);
+        pictures.put(pictures.size(), pictureModel);
     }
 
     @Override
     public void deletePicture(int i) throws Exception
     {
-        for (PictureModel p: pictures)
+        for (int k = 0; k < pictures.size(); k++)
         {
-            if (p.getID() == i)
+            PictureModel tempPicture = pictures.get(k);
+
+            if (tempPicture.getID() == i)
             {
-                pictures.remove(p);
+                pictures.remove(k);
             }
+
         }
     }
 
     @Override
     public Collection<PhotographerModel> getPhotographers() throws Exception
     {
-        return this.photographers;
+        return this.photographers.values();
     }
 
     @Override
     public PhotographerModel getPhotographer(int i) throws Exception
     {
-        for (PhotographerModel p: photographers)
+        for (PhotographerModel p: photographers.values())
         {
             if (p.getID() == i)
             {
@@ -127,18 +144,23 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public void save(PhotographerModel photographerModel) throws Exception
     {
-        photographers.add(photographerModel);
+        photographers.put(photographers.size(), photographerModel);
     }
 
     @Override
     public void deletePhotographer(int i) throws Exception
     {
-        for (PhotographerModel p: photographers)
+        for (int k = 0; k < photographers.size(); k++)
         {
-            if (p.getID() == i)
+            PhotographerModel tempPhotographer = photographers.get(k);
+
+            //todo: if photographer is linked with a picture - throw an exception (pictures->iptc)
+
+            if (tempPhotographer.getID() == i)
             {
-                photographers.remove(p);
+                photographers.remove(k);
             }
+
         }
 
     }
@@ -146,13 +168,13 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public Collection<CameraModel> getCameras()
     {
-        return this.cameras;
+        return this.cameras.values();
     }
 
     @Override
     public CameraModel getCamera(int i)
     {
-        for (CameraModel camera: cameras)
+        for (CameraModel camera: cameras.values())
         {
             if (camera.getID() == i)
             {

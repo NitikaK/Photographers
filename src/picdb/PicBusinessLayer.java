@@ -7,25 +7,16 @@ import BIF.SWE2.interfaces.models.*;
 import java.io.File;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.LinkedList;
 
-/**
- * Created by gomgom on 12/03/2017.
- */
+
 public class PicBusinessLayer implements BusinessLayer
 {
-
-    private Collection pictures = new LinkedList<PictureModel>();
-    //private Collection<PhotographerModel> photographers;
-    //private Collection<CameraModel> cameras;
-
     private DataAccessLayer dal;
 
     public PicBusinessLayer()
     {
-        //this.photographers = new LinkedList();
-        //this.cameras = new LinkedList();
-
         DALFactory factory = new DALFactory();
         this.dal = factory.getDAL("mockDAL");
     }
@@ -35,8 +26,7 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public Collection<PictureModel> getPictures() throws Exception
     {
-        return this.pictures;
-        //return dal.getPictures(null, null, null, null);
+        return dal.getPictures(null, null, null, null);
     }
 
     @Override
@@ -66,11 +56,35 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public void sync() throws Exception
     {
+
         File picFolder = new File("./Pictures");
-        for (File f: picFolder.listFiles())
+
+        //todo map
+        /*HashMap<Integer, File> files = new HashMap<>();
+
+        for(File f: picFolder.listFiles())
         {
-            pictures.add(f);
+            files.put()
+        } */
+
+
+
+        File[] fileList = picFolder.listFiles();
+
+        for (File f: fileList)
+        {
+            if (!f.isDirectory())
+            {
+                PictureModel temp = new PicPictureModel();
+                temp.setFileName(f.getName());
+                temp.setEXIF(extractEXIF(f.getName()));
+                temp.setIPTC(extractIPTC(f.getName()));
+                dal.save(temp);
+            }
+
         }
+        //todo: other way around
+
 
     }
 
