@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3cbc2fbb-81af-4a86-8cc2-b7a55cf4a540" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/DALFactory.java" afterPath="$PROJECT_DIR$/src/picdb/DALFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uebungen/UEB4Impl.java" afterPath="$PROJECT_DIR$/src/uebungen/UEB4Impl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -784,7 +780,7 @@
       <workItem from="1492505183625" duration="448000" />
       <workItem from="1492605742240" duration="598000" />
       <workItem from="1492606472977" duration="38000" />
-      <workItem from="1492606871775" duration="23574000" />
+      <workItem from="1492606871775" duration="23646000" />
     </task>
     <task id="LOCAL-00001" summary="Ue2 MainWindowPresentationModel">
       <created>1489658330506</created>
@@ -856,7 +852,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493062879374</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changed Collection to HashMaps&#10;Zaczek approved">
+      <created>1493111107726</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1493111107726</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -892,7 +895,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46997000" />
+    <option name="totallyTimeSpent" value="47069000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="1436" height="878" extended-state="6" />
@@ -998,7 +1001,8 @@
     <MESSAGE value="Finished MockDAL" />
     <MESSAGE value="Update PicSearchPresentationModel" />
     <MESSAGE value="Finished EXIF Model,&#10;ÜE 1,2,3 green" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished EXIF Model,&#10;ÜE 1,2,3 green" />
+    <MESSAGE value="Changed Collection to HashMaps&#10;Zaczek approved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Collection to HashMaps&#10;Zaczek approved" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
