@@ -4,9 +4,6 @@ import BIF.SWE2.interfaces.models.CameraModel;
 
 import java.time.LocalDate;
 
-/**
- * Created by gomgom on 12/03/2017.
- */
 public class PicCameraModel implements CameraModel
 {
     private Integer id;

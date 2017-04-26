@@ -61,12 +61,20 @@ public class PicBusinessLayer implements BusinessLayer
 
         HashMap<Integer, File> files = new HashMap<>();
 
-        //fill hashmap
-        for(File f: picFolder.listFiles())
+        if (picFolder.listFiles() == null)
         {
-            files.put(i,f);
-            i++;
+            throw new Exception("Folder is empty");
+        }else
+        {
+            //fill hashmap
+            for(File f: picFolder.listFiles())
+            {
+                files.put(i,f);
+                i++;
+            }
         }
+
+
 
         //save files that exist in the directory but not in the database
         for (File f: files.values())
@@ -139,7 +147,16 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public IPTCModel extractIPTC(String s) throws Exception
     {
-        return null;
+        LinkedList<PictureModel> tempPics = (LinkedList<PictureModel>) dal.getPictures(s, null, null, null);
+
+        if (tempPics.size() == 0)
+        {
+            throw new Exception("No file named " + s + " found");
+        }
+        else
+        {
+            return tempPics.get(0).getIPTC();
+        }
     }
 
     @Override
@@ -147,9 +164,14 @@ public class PicBusinessLayer implements BusinessLayer
     {
         LinkedList<PictureModel> tempPics = (LinkedList<PictureModel>) dal.getPictures(s, null, null, null);
 
-        EXIFModel tempExif = tempPics.get(0).getEXIF();
-        return tempExif;
-
+        if (tempPics.size() == 0)
+        {
+            throw new Exception("No file named " + s + " found");
+        }
+        else
+        {
+            return tempPics.get(0).getEXIF();
+        }
     }
 
     @Override

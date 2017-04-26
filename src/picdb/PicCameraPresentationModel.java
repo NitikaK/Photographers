@@ -6,9 +6,7 @@ import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 
 import java.time.LocalDate;
 
-/**
- * Created by gomgom on 12/03/2017.
- */
+
 public class PicCameraPresentationModel implements CameraPresentationModel
 {
     private int id;
@@ -20,12 +18,17 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     private int numberOfPictures;
     private double isoLimitGood;
     private double isoLimitAcceptable;
+    /*
+    private boolean isValid;
+    private boolean isValidProducer;
+    */
 
     public PicCameraPresentationModel(CameraModel model)
     {
         this.producer = model.getProducer();
         this.make = model.getMake();
-
+        this.isoLimitGood = model.getISOLimitGood();
+        this.isoLimitAcceptable = model.getISOLimitAcceptable();
     }
 
     public PicCameraPresentationModel()
@@ -33,10 +36,11 @@ public class PicCameraPresentationModel implements CameraPresentationModel
         //forever empty :(
     }
 
+
     @Override
     public int getID()
     {
-        return 0;
+        return this.id;
     }
 
     @Override
@@ -99,6 +103,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
         return false;
     }
 
+
     @Override
     public String getValidationSummary()
     {
@@ -126,7 +131,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public double getISOLimitGood()
     {
-        return 0;
+        return this.isoLimitGood;
     }
 
     @Override
@@ -138,7 +143,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public double getISOLimitAcceptable()
     {
-        return 0;
+        return this.isoLimitAcceptable;
     }
 
     @Override

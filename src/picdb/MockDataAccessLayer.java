@@ -43,10 +43,10 @@ public class MockDataAccessLayer implements DataAccessLayer
 
             IPTCModel iptcMock = new PicIPTCModel();
             iptcMock.setByLine("Hans");
-            iptcMock.setCaption("");
-            iptcMock.setCopyrightNotice("");
-            iptcMock.setHeadline("");
-            iptcMock.setKeywords("");
+            iptcMock.setCaption("abab");
+            iptcMock.setCopyrightNotice("no copyright");
+            iptcMock.setHeadline("best picture ever");
+            iptcMock.setKeywords("1nicespic");
             mockPic.setIPTC(iptcMock);
 
             this.pictures.put(pictureId, mockPic);
