@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3cbc2fbb-81af-4a86-8cc2-b7a55cf4a540" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicIPTCModel.java" afterPath="$PROJECT_DIR$/src/picdb/PicIPTCModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicPhotographerModel.java" afterPath="$PROJECT_DIR$/src/picdb/PicPhotographerModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicPictureModel.java" afterPath="$PROJECT_DIR$/src/picdb/PicPictureModel.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -800,7 +795,7 @@
       <workItem from="1492505183625" duration="448000" />
       <workItem from="1492605742240" duration="598000" />
       <workItem from="1492606472977" duration="38000" />
-      <workItem from="1492606871775" duration="30367000" />
+      <workItem from="1492606871775" duration="30374000" />
     </task>
     <task id="LOCAL-00001" summary="Ue2 MainWindowPresentationModel">
       <created>1489658330506</created>
@@ -893,7 +888,14 @@
       <option name="project" value="LOCAL" />
       <updated>1493206212747</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Changed ID, KEY handling in mockdal&#10;Sync function coded but not tested">
+      <created>1493220670929</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1493220670929</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -929,7 +931,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53790000" />
+    <option name="totallyTimeSpent" value="53797000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
