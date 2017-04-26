@@ -31,14 +31,24 @@ public class MockDataAccessLayer implements DataAccessLayer
         for (int i = 0; i < 10; i++)
         {
             PictureModel mockPic = new PicPictureModel();
-            mockPic.setFileName("Img" + i + "jpg");
-            mockPic.setID(photographerId);
+            mockPic.setFileName("Img" + i + ".jpg");
+            mockPic.setID(pictureId);
+
             EXIFModel exifMock = new PicEXIFModel();
             exifMock.setMake("NiceCam");
             exifMock.setExposureTime(23.12);
             exifMock.setFNumber(23.12);
             exifMock.setISOValue(23.12);
             mockPic.setEXIF(exifMock);
+
+            IPTCModel iptcMock = new PicIPTCModel();
+            iptcMock.setByLine("Hans");
+            iptcMock.setCaption("");
+            iptcMock.setCopyrightNotice("");
+            iptcMock.setHeadline("");
+            iptcMock.setKeywords("");
+            mockPic.setIPTC(iptcMock);
+
             this.pictures.put(pictureId, mockPic);
             pictureId++;
         }
@@ -47,7 +57,7 @@ public class MockDataAccessLayer implements DataAccessLayer
         {
             PhotographerModel mockPhotographer = new PicPhotographerModel();
             mockPhotographer.setID(photographerId);
-            this.photographers.put(pictureId, mockPhotographer);
+            this.photographers.put(photographerId, mockPhotographer);
             photographerId++;
         }
 
@@ -55,7 +65,7 @@ public class MockDataAccessLayer implements DataAccessLayer
         {
             CameraModel mockCam = new PicCameraModel();
             mockCam.setID(cameraId);
-            this.cameras.put(pictureId, mockCam);
+            this.cameras.put(cameraId, mockCam);
             cameraId++;
         }
     }
@@ -141,7 +151,17 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public void deletePhotographer(int i) throws Exception
     {
-        //todo: if photographer is linked with a picture - throw an exception (pictures->iptc)
+
+        PhotographerModel photographer = photographers.get(i);
+        String nameOfPhotographer = photographer.getFirstName() + " " + photographer.getLastName();
+
+        for (PictureModel entryModel: pictures.values())
+        {
+            if (entryModel.getIPTC().getByLine().equals(nameOfPhotographer))
+            {
+                throw new Exception("Photographer is linked to picture");
+            }
+        }
         photographers.remove(i);
     }
 

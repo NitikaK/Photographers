@@ -19,20 +19,7 @@ public class PicPictureModel implements PictureModel
         this.fileName = file;
     }
 
-    public PicPictureModel()
-    {
-
-    }
-
-    public PhotographerModel getPhotographer()
-    {
-        return photographer;
-    }
-
-    public void setPhotographer(PhotographerModel photographer)
-    {
-        this.photographer = photographer;
-    }
+    public PicPictureModel(){}
 
     @Override
     public int getID()

@@ -17,22 +17,11 @@ public class PicPhotographerModel implements PhotographerModel
     private String lastName;
     private LocalDate birthDay;
     private String notes;
-    private Collection<PictureModel> pictures;
-
-    public PicPhotographerModel()
-    {
-        pictures = new LinkedList<>();
-    }
-
-    public void addPicture(PictureModel pic)
-    {
-        this.pictures.add(pic);
-    }
 
     @Override
     public int getID()
     {
-        return id;
+        return this.id;
     }
 
     @Override

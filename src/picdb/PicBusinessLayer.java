@@ -58,7 +58,7 @@ public class PicBusinessLayer implements BusinessLayer
 
         File picFolder = new File("./Pictures");
 
-        //todo map
+
         HashMap<Integer, File> files = new HashMap<>();
 
         //fill hashmap
@@ -67,7 +67,6 @@ public class PicBusinessLayer implements BusinessLayer
             files.put(i,f);
             i++;
         }
-
 
         //save files that exist in the directory but not in the database
         for (File f: files.values())
@@ -89,19 +88,17 @@ public class PicBusinessLayer implements BusinessLayer
             }
         }
 
-        //todo check if tests pass
-
         List<PictureModel> picsFromDb = new ArrayList<>(getPictures(null, null, null, null));
         //delete files from the database that do not exist in the directory
-        for (int k = 0; k < picsFromDb.size(); k++)
+        for (PictureModel pic: picsFromDb)
         {
             toDelete = true;
 
-            for (File f: files.values())
+            for (File f : files.values())
             {
-                if(!f.isDirectory())
+                if (!f.isDirectory())
                 {
-                    if (f.getName() == picsFromDb.get(k).getFileName())
+                    if (f.getName().equals(pic.getFileName()))
                     {
                         toDelete = false;
                     }
@@ -110,13 +107,9 @@ public class PicBusinessLayer implements BusinessLayer
 
             if (toDelete)
             {
-                deletePicture(picsFromDb.get(k).getID());
+                deletePicture(pic.getID());
             }
         }
-
-
-
-
     }
 
     @Override

@@ -7,63 +7,70 @@ import BIF.SWE2.interfaces.models.IPTCModel;
  */
 public class PicIPTCModel implements IPTCModel
 {
+
+    private String keywords;
+    private String byLine;
+    private String copyrightNotice;
+    private String headline;
+    private String caption;
+
     @Override
     public String getKeywords()
     {
-        return null;
+        return keywords;
     }
 
     @Override
-    public void setKeywords(String s)
+    public void setKeywords(String keywords)
     {
-
+        this.keywords = keywords;
     }
 
     @Override
     public String getByLine()
     {
-        return null;
+        return byLine;
     }
 
     @Override
-    public void setByLine(String s)
+    public void setByLine(String byLine)
     {
-
+        this.byLine = byLine;
     }
 
     @Override
     public String getCopyrightNotice()
     {
-        return null;
+        return copyrightNotice;
     }
 
     @Override
-    public void setCopyrightNotice(String s)
+    public void setCopyrightNotice(String copyrightNotice)
     {
-
+        this.copyrightNotice = copyrightNotice;
     }
 
     @Override
     public String getHeadline()
     {
-        return null;
+        return headline;
     }
 
     @Override
-    public void setHeadline(String s)
+    public void setHeadline(String headline)
     {
-
+        this.headline = headline;
     }
 
     @Override
     public String getCaption()
     {
-        return null;
+        return caption;
     }
 
     @Override
-    public void setCaption(String s)
+    public void setCaption(String caption)
     {
-
+        this.caption = caption;
     }
 }
