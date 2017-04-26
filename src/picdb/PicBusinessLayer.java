@@ -5,10 +5,7 @@ import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.models.*;
 
 import java.io.File;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 
 public class PicBusinessLayer implements BusinessLayer
@@ -18,7 +15,7 @@ public class PicBusinessLayer implements BusinessLayer
     public PicBusinessLayer()
     {
         DALFactory factory = new DALFactory();
-        this.dal = factory.getDAL("mockDAL");
+        this.dal = factory.getDAL(DALType.MOCK);
     }
 
 
@@ -56,34 +53,68 @@ public class PicBusinessLayer implements BusinessLayer
     @Override
     public void sync() throws Exception
     {
+        int i = 0; //counter
+        boolean toDelete;
 
         File picFolder = new File("./Pictures");
 
         //todo map
-        /*HashMap<Integer, File> files = new HashMap<>();
+        HashMap<Integer, File> files = new HashMap<>();
 
+        //fill hashmap
         for(File f: picFolder.listFiles())
         {
-            files.put()
-        } */
+            files.put(i,f);
+            i++;
+        }
 
 
-
-        File[] fileList = picFolder.listFiles();
-
-        for (File f: fileList)
+        //save files that exist in the directory but not in the database
+        for (File f: files.values())
         {
             if (!f.isDirectory())
             {
-                PictureModel temp = new PicPictureModel();
-                temp.setFileName(f.getName());
-                temp.setEXIF(extractEXIF(f.getName()));
-                temp.setIPTC(extractIPTC(f.getName()));
-                dal.save(temp);
+                //get filtered list with filename
+                Collection picsFromDb = getPictures(f.getName(), null, null, null);
+
+                //if the picture does not exist yet, add it to the database
+                if (picsFromDb.isEmpty())
+                {
+                    PictureModel temp = new PicPictureModel();
+                    temp.setFileName(f.getName());
+                    temp.setEXIF(extractEXIF(f.getName()));
+                    temp.setIPTC(extractIPTC(f.getName()));
+                    dal.save(temp);
+                }
+            }
+        }
+
+        //todo check if tests pass
+
+        List<PictureModel> picsFromDb = new ArrayList<>(getPictures(null, null, null, null));
+        //delete files from the database that do not exist in the directory
+        for (int k = 0; k < picsFromDb.size(); k++)
+        {
+            toDelete = true;
+
+            for (File f: files.values())
+            {
+                if(!f.isDirectory())
+                {
+                    if (f.getName() == picsFromDb.get(k).getFileName())
+                    {
+                        toDelete = false;
+                    }
+                }
             }
 
+            if (toDelete)
+            {
+                deletePicture(picsFromDb.get(k).getID());
+            }
         }
-        //todo: other way around
+
+
 
 
     }

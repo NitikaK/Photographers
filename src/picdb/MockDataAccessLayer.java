@@ -39,7 +39,7 @@ public class MockDataAccessLayer implements DataAccessLayer
             exifMock.setFNumber(23.12);
             exifMock.setISOValue(23.12);
             mockPic.setEXIF(exifMock);
-            this.pictures.put(i, mockPic);
+            this.pictures.put(pictureId, mockPic);
             pictureId++;
         }
 
@@ -47,7 +47,7 @@ public class MockDataAccessLayer implements DataAccessLayer
         {
             PhotographerModel mockPhotographer = new PicPhotographerModel();
             mockPhotographer.setID(photographerId);
-            this.photographers.put(i, mockPhotographer);
+            this.photographers.put(pictureId, mockPhotographer);
             photographerId++;
         }
 
@@ -55,7 +55,7 @@ public class MockDataAccessLayer implements DataAccessLayer
         {
             CameraModel mockCam = new PicCameraModel();
             mockCam.setID(cameraId);
-            this.cameras.put(i, mockCam);
+            this.cameras.put(pictureId, mockCam);
             cameraId++;
         }
     }
@@ -104,22 +104,13 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public void save(PictureModel pictureModel) throws Exception
     {
-        pictures.put(pictures.size(), pictureModel);
+        pictures.put(pictureModel.getID(), pictureModel);
     }
 
     @Override
     public void deletePicture(int i) throws Exception
     {
-        for (int k = 0; k < pictures.size(); k++)
-        {
-            PictureModel tempPicture = pictures.get(k);
-
-            if (tempPicture.getID() == i)
-            {
-                pictures.remove(k);
-            }
-
-        }
+        pictures.remove(i);
     }
 
     @Override
@@ -150,19 +141,8 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public void deletePhotographer(int i) throws Exception
     {
-        for (int k = 0; k < photographers.size(); k++)
-        {
-            PhotographerModel tempPhotographer = photographers.get(k);
-
-            //todo: if photographer is linked with a picture - throw an exception (pictures->iptc)
-
-            if (tempPhotographer.getID() == i)
-            {
-                photographers.remove(k);
-            }
-
-        }
-
+        //todo: if photographer is linked with a picture - throw an exception (pictures->iptc)
+        photographers.remove(i);
     }
 
     @Override

@@ -4,10 +4,7 @@ import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.UEB3;
 import BIF.SWE2.interfaces.presentationmodels.SearchPresentationModel;
-import picdb.DALFactory;
-import picdb.PicBusinessLayer;
-import picdb.PicDataAccesslayer;
-import picdb.PicSearchPresentationModel;
+import picdb.*;
 
 public class UEB3Impl implements UEB3 {
 
@@ -27,7 +24,7 @@ public class UEB3Impl implements UEB3 {
     public DataAccessLayer getDataAccessLayer()
     {
         DALFactory dalFactory = new DALFactory();
-        DataAccessLayer mockDAL = dalFactory.getDAL("mockDAL");
+        DataAccessLayer mockDAL = dalFactory.getDAL(DALType.MOCK);
         return mockDAL;
     }
 

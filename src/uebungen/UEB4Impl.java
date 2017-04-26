@@ -8,9 +8,7 @@ import BIF.SWE2.interfaces.models.IPTCModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.EXIFPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.IPTCPresentationModel;
-import picdb.PicEXIFModel;
-import picdb.PicEXIFPresentationModel;
-import picdb.PicIPTCModel;
+import picdb.*;
 
 public class UEB4Impl implements UEB4 {
 
@@ -22,8 +20,8 @@ public class UEB4Impl implements UEB4 {
 
 	@Override
 	public BusinessLayer getBusinessLayer() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return new PicBusinessLayer();
 	}
 
 	@Override
@@ -46,17 +44,17 @@ public class UEB4Impl implements UEB4 {
 
 	@Override
 	public IPTCPresentationModel getIPTCPresentationModel(IPTCModel iptcModel) {
-		return null;
+		return new PicIPTCPresentationModel();
 	}
 
 	@Override
 	public CameraModel getCameraModel(String s, String s1) {
-		return null;
+		return new PicCameraModel(s, s1);
 	}
 
 	@Override
 	public CameraPresentationModel getCameraPresentationModel(CameraModel cameraModel) {
-		return null;
+		return new PicCameraPresentationModel(cameraModel);
 	}
 
 	@Override

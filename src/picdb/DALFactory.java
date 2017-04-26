@@ -6,15 +6,15 @@ public class DALFactory
 {
     private DataAccessLayer dal;
 
-    public DataAccessLayer getDAL(String dalType)
+    public DataAccessLayer getDAL(DALType dalType)
     {
         switch (dalType)
         {
-            case "mockDAL":
+            case MOCK:
                 dal = new MockDataAccessLayer();
                 break;
 
-            case "picDAL":
+            case DATABASE:
                 dal = new PicDataAccesslayer();
                 break;
 
