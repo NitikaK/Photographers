@@ -33,7 +33,7 @@ public class UEB4Impl implements UEB4 {
 	@Override
 	public EXIFPresentationModel getEXIFPresentationModel(EXIFModel exifModel)
 	{
-		return new PicEXIFPresentationModel();
+		return new PicEXIFPresentationModel(exifModel);
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class UEB4Impl implements UEB4 {
 
 	@Override
 	public IPTCPresentationModel getIPTCPresentationModel(IPTCModel iptcModel) {
-		return new PicIPTCPresentationModel();
+		return new PicIPTCPresentationModel(iptcModel);
 	}
 
 	@Override

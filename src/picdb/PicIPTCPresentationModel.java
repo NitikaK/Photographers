@@ -1,77 +1,107 @@
 package picdb;
 
+import BIF.SWE2.interfaces.models.IPTCModel;
 import BIF.SWE2.interfaces.presentationmodels.IPTCPresentationModel;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 /**
  * Created by gomgom on 12/03/2017.
  */
 public class PicIPTCPresentationModel implements IPTCPresentationModel
 {
+    private String keywords;
+    private String byLine;
+    private String copyrightNotice;
+    private Collection<String> copyrightNotices;
+    private String headline;
+    private String caption;
+
+    public PicIPTCPresentationModel(IPTCModel iptc)
+    {
+        this.keywords = iptc.getKeywords();
+        this.byLine = iptc.getByLine();
+        this.copyrightNotice = iptc.getCopyrightNotice();
+        this.headline = iptc.getHeadline();
+        this.caption = iptc.getCaption();
+        this.copyrightNotices = new LinkedList<>();
+        copyrightNotices.add("All rights reserved");
+        copyrightNotices.add("CC-BY");
+        copyrightNotices.add("CC-BY-SA");
+        copyrightNotices.add("CC-BY-ND");
+        copyrightNotices.add("CC-BY-NC");
+
+
+    }
+
+    public PicIPTCPresentationModel(){}
+
     @Override
     public String getKeywords()
     {
-        return null;
+        return keywords;
     }
 
     @Override
-    public void setKeywords(String s)
+    public void setKeywords(String keywords)
     {
-
+        this.keywords = keywords;
     }
 
     @Override
     public String getByLine()
     {
-        return null;
+        return byLine;
     }
 
     @Override
-    public void setByLine(String s)
+    public void setByLine(String byLine)
     {
-
+        this.byLine = byLine;
     }
 
     @Override
     public String getCopyrightNotice()
     {
-        return null;
+        return copyrightNotice;
     }
 
     @Override
-    public void setCopyrightNotice(String s)
+    public void setCopyrightNotice(String copyrightNotice)
     {
-
+        this.copyrightNotice = copyrightNotice;
     }
 
     @Override
     public Collection<String> getCopyrightNotices()
     {
-        return null;
+        return this.copyrightNotices;
     }
 
     @Override
     public String getHeadline()
     {
-        return null;
+        return headline;
     }
 
     @Override
-    public void setHeadline(String s)
+    public void setHeadline(String headline)
     {
-
+        this.headline = headline;
     }
 
     @Override
     public String getCaption()
     {
-        return null;
+        return caption;
     }
 
     @Override
-    public void setCaption(String s)
+    public void setCaption(String caption)
     {
-
+        this.caption = caption;
     }
 }

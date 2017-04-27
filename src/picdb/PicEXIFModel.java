@@ -13,7 +13,7 @@ public class PicEXIFModel implements EXIFModel
     private double exposureTime;
     private double isoValue;
     private boolean flash;
-    private ExposurePrograms exposurePrograms;
+    private ExposurePrograms exposureProgram;
 
     @Override
     public String getMake()
@@ -78,12 +78,12 @@ public class PicEXIFModel implements EXIFModel
     @Override
     public ExposurePrograms getExposureProgram()
     {
-        return exposurePrograms;
+        return exposureProgram;
     }
 
     @Override
-    public void setExposureProgram(ExposurePrograms exposurePrograms)
+    public void setExposureProgram(ExposurePrograms exposureProgram)
     {
-        this.exposurePrograms = exposurePrograms;
+        this.exposureProgram = exposureProgram;
     }
 }
