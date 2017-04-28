@@ -14,7 +14,6 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     private String make;
     private LocalDate boughtOn;
     private String notes;
-    private String validationSummary;
     private int numberOfPictures;
     private double isoLimitGood;
     private double isoLimitAcceptable;
@@ -100,32 +99,65 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public boolean isValid()
     {
-        return false;
+        if (!isValidBoughtOn() || !isValidMake() || !isValidProducer())
+        {
+            return false;
+        }
+        else return true;
     }
 
-
-    @Override
-    public String getValidationSummary()
-    {
-        return this.validationSummary;
-    }
 
     @Override
     public boolean isValidProducer()
     {
-        return false;
+        if(this.producer == null || this.producer.equals(""))
+        {
+            return false;
+        }
+        else return true;
     }
 
     @Override
     public boolean isValidMake()
     {
-        return false;
+        if(this.make == null || this.make.equals(""))
+        {
+            return false;
+        }
+        else return true;
     }
 
     @Override
     public boolean isValidBoughtOn()
     {
-        return false;
+        if (this.boughtOn != null && this.boughtOn.isAfter(LocalDate.now()))
+        {
+            return false;
+        }
+        else return true;
+    }
+
+    @Override
+    public String getValidationSummary()
+    {
+        String summary = "";
+
+        if (!this.isValidProducer())
+        {
+            summary += "Producer is not valid; ";
+        }
+
+        if (!this.isValidBoughtOn())
+        {
+            summary += "Bought on is not valid; ";
+        }
+
+        if (!this.isValidMake())
+        {
+            summary += "Make is not valid; ";
+        }
+
+        return summary;
     }
 
     @Override
