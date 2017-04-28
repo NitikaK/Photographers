@@ -1,5 +1,6 @@
 package picdb;
 
+import BIF.SWE2.interfaces.models.PhotographerModel;
 import BIF.SWE2.interfaces.presentationmodels.PhotographerPresentationModel;
 
 import java.time.LocalDate;
@@ -9,58 +10,75 @@ import java.time.LocalDate;
  */
 public class PicPhotographerPresentationModel implements PhotographerPresentationModel
 {
+    private int id;
+    private String firstName;
+    private String lastName;
+    private LocalDate birthDay;
+    private String notes;
+
+    public PicPhotographerPresentationModel(){}
+
+    public PicPhotographerPresentationModel(PhotographerModel pModel)
+    {
+        this.id = pModel.getID();
+        this.firstName = pModel.getFirstName();
+        this.lastName = pModel.getLastName();
+        this.birthDay = pModel.getBirthDay();
+        this.notes = pModel.getNotes();
+    }
+
     @Override
     public int getID()
     {
-        return 0;
+        return id;
     }
 
     @Override
     public String getFirstName()
     {
-        return null;
+        return firstName;
     }
 
     @Override
-    public void setFirstName(String s)
+    public void setFirstName(String firstName)
     {
-
+        this.firstName = firstName;
     }
 
     @Override
     public String getLastName()
     {
-        return null;
+        return lastName;
     }
 
     @Override
-    public void setLastName(String s)
+    public void setLastName(String lastName)
     {
-
+        this.lastName = lastName;
     }
 
     @Override
     public LocalDate getBirthDay()
     {
-        return null;
+        return birthDay;
     }
 
     @Override
-    public void setBirthDay(LocalDate localDate)
+    public void setBirthDay(LocalDate birthDay)
     {
-
+        this.birthDay = birthDay;
     }
 
     @Override
     public String getNotes()
     {
-        return null;
+        return notes;
     }
 
     @Override
-    public void setNotes(String s)
+    public void setNotes(String notes)
     {
-
+        this.notes = notes;
     }
 
     @Override
@@ -72,24 +90,53 @@ public class PicPhotographerPresentationModel implements PhotographerPresentatio
     @Override
     public boolean isValid()
     {
-        return false;
+        if (isValidBirthDay() && isValidLastName())
+        {
+            return true;
+        }
+        else return false;
     }
 
     @Override
     public String getValidationSummary()
     {
-        return null;
+        String summary = "";
+
+        if (!isValid())
+        {
+            if (!isValidBirthDay())
+            {
+                summary += "Birthday is not valid. ";
+            }
+
+            if (!isValidLastName())
+            {
+                summary += "Lastname is not valid.";
+            }
+        }
+
+        return summary;
     }
 
     @Override
     public boolean isValidLastName()
     {
-        return false;
+        if(this.lastName != null && !this.lastName.isEmpty())
+        {
+            return true;
+        }
+        else return false;
+
     }
 
     @Override
     public boolean isValidBirthDay()
     {
-        return false;
+        if (this.birthDay == null || this.birthDay.isBefore(LocalDate.now()))
+        {
+            return true;
+        }
+        else return false;
+
     }
 }

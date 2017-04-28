@@ -6,6 +6,7 @@ import BIF.SWE2.interfaces.models.CameraModel;
 import BIF.SWE2.interfaces.models.PhotographerModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PhotographerPresentationModel;
+import picdb.*;
 
 public class UEB5Impl implements UEB5 {
 
@@ -16,29 +17,33 @@ public class UEB5Impl implements UEB5 {
 	}
 
 	@Override
-	public BusinessLayer getBusinessLayer() {
-		// TODO Auto-generated method stub
-		return null;
+	public BusinessLayer getBusinessLayer()
+	{
+		return new PicBusinessLayer();
 	}
 
 	@Override
-	public PhotographerModel getEmptyPhotographerModel() {
-		return null;
+	public PhotographerModel getEmptyPhotographerModel()
+	{
+		return new PicPhotographerModel();
 	}
 
 	@Override
-	public PhotographerPresentationModel getPhotographerPresentationModel(PhotographerModel photographerModel) {
-		return null;
+	public PhotographerPresentationModel getPhotographerPresentationModel(PhotographerModel photographerModel)
+	{
+		return new PicPhotographerPresentationModel(photographerModel);
 	}
 
 	@Override
-	public CameraModel getEmptyCameraModel() {
-		return null;
+	public CameraModel getEmptyCameraModel()
+	{
+		return new PicCameraModel();
 	}
 
 	@Override
-	public CameraPresentationModel getCameraPresentationModel(CameraModel cameraModel) {
-		return null;
+	public CameraPresentationModel getCameraPresentationModel(CameraModel cameraModel)
+	{
+		return new PicCameraPresentationModel(cameraModel);
 	}
 
 	@Override
