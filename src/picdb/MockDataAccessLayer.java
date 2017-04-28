@@ -6,6 +6,7 @@ import BIF.SWE2.interfaces.models.*;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Random;
 
 public class MockDataAccessLayer implements DataAccessLayer
 {
@@ -13,52 +14,85 @@ public class MockDataAccessLayer implements DataAccessLayer
     private HashMap<Integer, PictureModel> pictures;
     private HashMap<Integer, PhotographerModel> photographers;
     private HashMap<Integer, CameraModel> cameras;
+    private int pictureId;
+    private int photographerId;
+    private int cameraId;
 
-    public MockDataAccessLayer()
+    public MockDataAccessLayer(MockPicture picType)
     {
         this.pictures = new HashMap<>();
         this.photographers = new HashMap<>();
         this.cameras = new HashMap<>();
-        createMockData();
+
+        createMockData(picType);
     }
 
-    private void createMockData()
+    public void createMockData(MockPicture pictureType)
     {
-        int pictureId = 1234;
-        int photographerId = 1234;
-        int cameraId = 1234;
+        pictureId = 1234;
+        photographerId = 1234;
+        cameraId = 1234;
 
-        for (int i = 0; i < 10; i++)
+        switch (pictureType)
         {
-            PictureModel mockPic = new PicPictureModel();
-            mockPic.setFileName("Img" + i + ".jpg");
-            mockPic.setID(pictureId);
+            case LIST:
+                for (int i = 0; i < 10; i++)
+                {
+                    PictureModel mockPic = new PicPictureModel();
+                    mockPic.setFileName("Img" + i + ".jpg");
+                    mockPic.setID(pictureId);
 
-            EXIFModel exifMock = new PicEXIFModel();
-            exifMock.setMake("NiceCam");
-            exifMock.setExposureTime(23.12);
-            exifMock.setFNumber(23.12);
-            exifMock.setISOValue(23.12);
-            mockPic.setEXIF(exifMock);
+                    EXIFModel exifMock = new PicEXIFModel();
+                    exifMock.setMake("NiceCam");
+                    exifMock.setExposureTime(23.12);
+                    exifMock.setFNumber(23.12);
+                    exifMock.setISOValue(23.12);
+                    mockPic.setEXIF(exifMock);
 
-            IPTCModel iptcMock = new PicIPTCModel();
-            iptcMock.setByLine("Hans");
-            iptcMock.setCaption("abab");
-            iptcMock.setCopyrightNotice("no copyright");
-            iptcMock.setHeadline("best picture ever");
-            iptcMock.setKeywords("1nicespic");
-            mockPic.setIPTC(iptcMock);
+                    IPTCModel iptcMock = new PicIPTCModel();
+                    iptcMock.setByLine("Hans");
+                    iptcMock.setCaption("abab");
+                    iptcMock.setCopyrightNotice("no copyright");
+                    iptcMock.setHeadline("best picture ever");
+                    iptcMock.setKeywords("1nicespic");
+                    mockPic.setIPTC(iptcMock);
 
-            this.pictures.put(pictureId, mockPic);
-            pictureId++;
+                    try
+                    {
+                        save(mockPic);
+                    } catch (Exception e)
+                    {
+                        e.printStackTrace();
+                    }
+                }
+                break;
+
+            case SINGLE:
+                PictureModel blume = new PicPictureModel();
+                blume.setFileName("Blume.jpg");
+
+                try
+                {
+                    save(blume);
+                } catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+                break;
         }
+
 
         for (int i = 0; i < 10; i++)
         {
             PhotographerModel mockPhotographer = new PicPhotographerModel();
-            mockPhotographer.setID(photographerId);
-            this.photographers.put(photographerId, mockPhotographer);
-            photographerId++;
+            mockPhotographer.setFirstName("Hans" + new Random().nextInt(100));
+            try
+            {
+                save(mockPhotographer);
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+            }
         }
 
         for (int i = 0; i < 10; i++)
@@ -114,7 +148,17 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public void save(PictureModel pictureModel) throws Exception
     {
+        pictureModel.setID(pictureId);
+        pictureId++;
         pictures.put(pictureModel.getID(), pictureModel);
+    }
+
+    @Override
+    public void save(PhotographerModel photographerModel) throws Exception
+    {
+        photographerModel.setID(photographerId);
+        photographerId++;
+        photographers.put(photographerModel.getID(), photographerModel);
     }
 
     @Override
@@ -142,11 +186,7 @@ public class MockDataAccessLayer implements DataAccessLayer
         return null;
     }
 
-    @Override
-    public void save(PhotographerModel photographerModel) throws Exception
-    {
-        photographers.put(photographers.size(), photographerModel);
-    }
+
 
     @Override
     public void deletePhotographer(int i) throws Exception

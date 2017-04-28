@@ -12,13 +12,17 @@ public class PicBusinessLayer implements BusinessLayer
 {
     private DataAccessLayer dal;
 
+    public PicBusinessLayer(MockPicture picType)
+    {
+        DALFactory factory = new DALFactory();
+        this.dal = factory.getDAL(DALType.MOCK, picType);
+    }
+
     public PicBusinessLayer()
     {
         DALFactory factory = new DALFactory();
-        this.dal = factory.getDAL(DALType.MOCK);
+        this.dal = factory.getDAL(DALType.MOCK, MockPicture.LIST);
     }
-
-
 
     @Override
     public Collection<PictureModel> getPictures() throws Exception

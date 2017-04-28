@@ -6,12 +6,12 @@ public class DALFactory
 {
     private DataAccessLayer dal;
 
-    public DataAccessLayer getDAL(DALType dalType)
+    public DataAccessLayer getDAL(DALType dalType, MockPicture picType)
     {
         switch (dalType)
         {
             case MOCK:
-                dal = new MockDataAccessLayer();
+                dal = new MockDataAccessLayer(picType);
                 break;
 
             case DATABASE:

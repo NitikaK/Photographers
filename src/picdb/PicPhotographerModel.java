@@ -18,6 +18,9 @@ public class PicPhotographerModel implements PhotographerModel
     private LocalDate birthDay;
     private String notes;
 
+    public PicPhotographerModel(){}
+
+
     @Override
     public int getID()
     {

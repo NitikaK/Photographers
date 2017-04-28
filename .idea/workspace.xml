@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbc2fbb-81af-4a86-8cc2-b7a55cf4a540" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/picdb/MockPicture.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicCameraPresentationModel.java" afterPath="$PROJECT_DIR$/src/picdb/PicCameraPresentationModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/DALFactory.java" afterPath="$PROJECT_DIR$/src/picdb/DALFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicPhotographerModel.java" afterPath="$PROJECT_DIR$/src/picdb/PicPhotographerModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uebungen/UEB3Impl.java" afterPath="$PROJECT_DIR$/src/uebungen/UEB3Impl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uebungen/UEB6Impl.java" afterPath="$PROJECT_DIR$/src/uebungen/UEB6Impl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,39 +30,19 @@
           <file leaf-file-name="PicBusinessLayer.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/picdb/PicBusinessLayer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="675">
-                  <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+                <state relative-caret-position="300">
+                  <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PicEXIFPresentationModel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/picdb/PicEXIFPresentationModel.java">
+          <file leaf-file-name="DALFactory.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/picdb/DALFactory.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="945">
-                  <caret line="90" column="11" lean-forward="false" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1147#1148#0" expanded="true" />
-                    <element signature="e#1181#1182#0" expanded="true" />
-                    <element signature="e#1277#1278#0" expanded="true" />
-                    <element signature="e#1330#1331#0" expanded="true" />
-                    <element signature="e#1379#1380#0" expanded="true" />
-                    <element signature="e#1406#1407#0" expanded="true" />
-                    <element signature="e#1458#1459#0" expanded="true" />
-                    <element signature="e#1488#1489#0" expanded="true" />
-                    <element signature="e#1545#1546#0" expanded="true" />
-                    <element signature="e#1580#1581#0" expanded="true" />
-                    <element signature="e#1633#1634#0" expanded="true" />
-                    <element signature="e#1664#1665#0" expanded="true" />
-                    <element signature="e#1715#1716#0" expanded="true" />
-                    <element signature="e#1743#1744#0" expanded="true" />
-                    <element signature="e#1803#1804#0" expanded="true" />
-                    <element signature="e#1841#1842#0" expanded="true" />
-                    <element signature="e#2898#2899#0" expanded="true" />
-                    <element signature="e#2938#2939#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="210">
+                  <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -64,8 +50,8 @@
           <file leaf-file-name="MockDataAccessLayer.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1170">
-                  <caret line="83" column="14" lean-forward="false" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
+                <state relative-caret-position="480">
+                  <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -73,88 +59,77 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CameraPresentationModel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/presentationmodels/CameraPresentationModel.java">
+          <file leaf-file-name="UEB1Impl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/uebungen/UEB1Impl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+                <state relative-caret-position="330">
+                  <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PicCameraPresentationModel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/picdb/PicCameraPresentationModel.java">
+          <file leaf-file-name="DALType.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/picdb/DALType.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="912">
-                  <caret line="159" column="23" lean-forward="false" selection-start-line="159" selection-start-column="23" selection-end-line="159" selection-end-column="23" />
+                <state relative-caret-position="45">
+                  <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UEB6Test.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../BIF-SWE2.UnitTests/src/BIF/SWE2/unittests/UEB6Test.java">
+          <file leaf-file-name="MockPicture.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/picdb/MockPicture.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="689">
-                  <caret line="204" column="0" lean-forward="false" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+                <state relative-caret-position="105">
+                  <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UEB6Impl.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/uebungen/UEB6Impl.java">
+          <file leaf-file-name="PicCameraListPresentationModel.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/picdb/PicCameraListPresentationModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PhotographerPresentationModel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/presentationmodels/PhotographerPresentationModel.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PicIPTCModel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/picdb/PicIPTCModel.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="17" column="31" lean-forward="false" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+                <state relative-caret-position="180">
+                  <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="20" />
                   <folding>
-                    <element signature="e#356#357#0" expanded="true" />
-                    <element signature="e#387#388#0" expanded="true" />
-                    <element signature="e#453#454#0" expanded="true" />
-                    <element signature="e#493#494#0" expanded="true" />
-                    <element signature="e#544#545#0" expanded="true" />
-                    <element signature="e#573#574#0" expanded="true" />
-                    <element signature="e#635#636#0" expanded="true" />
-                    <element signature="e#671#672#0" expanded="true" />
-                    <element signature="e#731#732#0" expanded="true" />
-                    <element signature="e#769#770#0" expanded="true" />
-                    <element signature="e#849#850#0" expanded="true" />
-                    <element signature="e#903#904#0" expanded="true" />
-                    <element signature="e#956#957#0" expanded="true" />
-                    <element signature="e#987#988#0" expanded="true" />
-                    <element signature="e#1053#1054#0" expanded="true" />
-                    <element signature="e#1093#1094#0" expanded="true" />
+                    <element signature="e#397#398#0" expanded="true" />
+                    <element signature="e#424#425#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PictureListPresentationModel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/presentationmodels/PictureListPresentationModel.java">
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/picdb/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+                <state relative-caret-position="420">
+                  <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+                  <folding>
+                    <element signature="e#896#897#0" expanded="true" />
+                    <element signature="e#915#916#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UEB6Impl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/uebungen/UEB6Impl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UEB3Impl.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/uebungen/UEB3Impl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="26" column="82" lean-forward="false" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
                   <folding />
                 </state>
               </provider>
@@ -163,12 +138,22 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="UEB6Test.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/../BIF-SWE2.UnitTests/src/BIF/SWE2/unittests/UEB6Test.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="689">
-                  <caret line="204" column="0" lean-forward="false" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+                <state relative-caret-position="1346">
+                  <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Predicate.java" pinned="false" current-in-tab="false">
+            <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/function/Predicate.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="319">
+                  <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
@@ -227,16 +212,10 @@
         <option value="$PROJECT_DIR$/../BIF-SWE2.UnitTests/src/BIF/SWE2/unittests/UEB3Test.java" />
         <option value="$PROJECT_DIR$/src/picdb/PicDataAccesslayer.java" />
         <option value="$PROJECT_DIR$/src/picdb/PicSearchPresentationModel.java" />
-        <option value="$PROJECT_DIR$/src/picdb/Main.java" />
         <option value="$PROJECT_DIR$/src/picdb/DALType.java" />
-        <option value="$PROJECT_DIR$/src/picdb/DALFactory.java" />
-        <option value="$PROJECT_DIR$/src/uebungen/UEB3Impl.java" />
-        <option value="$PROJECT_DIR$/src/picdb/PicPhotographerModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/PicIPTCModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/PicPictureModel.java" />
-        <option value="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" />
         <option value="$PROJECT_DIR$/src/picdb/PicCameraModel.java" />
-        <option value="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" />
         <option value="$PROJECT_DIR$/src/uebungen/UEB4Impl.java" />
         <option value="$PROJECT_DIR$/src/picdb/PicEXIFModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/PicEXIFPresentationModel.java" />
@@ -244,6 +223,14 @@
         <option value="$PROJECT_DIR$/src/uebungen/UEB5Impl.java" />
         <option value="$PROJECT_DIR$/src/picdb/PicPhotographerPresentationModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/PicCameraPresentationModel.java" />
+        <option value="$PROJECT_DIR$/src/picdb/Main.java" />
+        <option value="$PROJECT_DIR$/src/picdb/PicPhotographerModel.java" />
+        <option value="$PROJECT_DIR$/src/picdb/MockPicture.java" />
+        <option value="$PROJECT_DIR$/src/picdb/DALFactory.java" />
+        <option value="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" />
+        <option value="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" />
+        <option value="$PROJECT_DIR$/src/uebungen/UEB6Impl.java" />
+        <option value="$PROJECT_DIR$/src/uebungen/UEB3Impl.java" />
       </list>
     </option>
   </component>
@@ -274,6 +261,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -396,8 +385,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -889,7 +876,9 @@
       <workItem from="1492605742240" duration="598000" />
       <workItem from="1492606472977" duration="38000" />
       <workItem from="1492606871775" duration="42408000" />
-      <workItem from="1493394791538" duration="1012000" />
+      <workItem from="1493394791538" duration="1340000" />
+      <workItem from="1493398787085" duration="64000" />
+      <workItem from="1493398899072" duration="5573000" />
     </task>
     <task id="LOCAL-00001" summary="Ue2 MainWindowPresentationModel">
       <created>1489658330506</created>
@@ -1017,43 +1006,50 @@
       <option name="project" value="LOCAL" />
       <updated>1493372327537</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="UE 5 green">
+      <created>1493395818901</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1493395818901</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllUnitTests - 2017.04.28 at 11h 24m 56s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 19h 31m 09s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllUnitTests - 2017.04.28 at 11h 25m 33s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 19h 33m 03s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllUnitTests - 2017.04.28 at 11h 27m 05s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 19h 35m 43s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllUnitTests - 2017.04.28 at 11h 34m 21s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 19h 50m 25s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllUnitTests - 2017.04.28 at 11h 34m 51s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 19h 51m 06s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllUnitTests - 2017.04.28 at 11h 38m 01s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 19h 54m 26s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllUnitTests - 2017.04.28 at 17h 55m 12s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 19h 54m 34s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllUnitTests - 2017.04.28 at 18h 03m 16s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 20h 01m 38s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllUnitTests - 2017.04.28 at 18h 04m 24s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 20h 10m 34s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AllUnitTests - 2017.04.28 at 18h 07m 48s.xml">
+    <history-entry file="AllUnitTests - 2017.04.28 at 20h 42m 53s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66843000" />
+    <option name="totallyTimeSpent" value="72808000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1066,7 +1062,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="22" width="2556" height="1418" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1077,20 +1072,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25791857" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25791857" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18337311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18575974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25681493" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.03133705" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39969835" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1152,14 +1147,35 @@
     <MESSAGE value="updated cameraPresentationModel for ue4" />
     <MESSAGE value="UE 1,2,3,4 green" />
     <MESSAGE value="Updated PicPhotographerPresentationModel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated PicPhotographerPresentationModel" />
+    <MESSAGE value="UE 5 green" />
+    <option name="LAST_COMMIT_MESSAGE" value="UE 5 green" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../BIF-SWE2.UnitTests/src/BIF/SWE2/unittests/UEB6Test.java</url>
+          <line>209</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../BIF-SWE2.UnitTests/src/BIF/SWE2/unittests/UEB6Test.java</url>
+          <line>208</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../BIF-SWE2.UnitTests/src/BIF/SWE2/unittests/UEB6Test.java</url>
+          <line>206</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="22" />
+      <option name="time" value="32" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1176,20 +1192,6 @@
     </buildFile>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/picdb/PicPictureListPresentationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/PicMainWindowPresentationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/UEB6.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1270,14 +1272,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/models/PictureModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/models/IPTCModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
@@ -1294,45 +1288,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding>
-            <element signature="e#896#897#0" expanded="false" />
-            <element signature="e#915#916#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/DALType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/picdb/application.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/uebungen/UEB3Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="5" lean-forward="false" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/PicPhotographerModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1343,19 +1302,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/PicPictureModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BIF-SWE2.UnitTests/src/BIF/SWE2/unittests/UEB2Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
           <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1382,17 +1332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uebungen/UEB1Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#808#809#0" expanded="true" />
-            <element signature="e#852#853#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/uebungen/UEB4Impl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1406,25 +1345,6 @@
         <state relative-caret-position="30">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/PicCameraModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/PicCameraListPresentationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="e#397#398#0" expanded="false" />
-            <element signature="e#424#425#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1460,14 +1380,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/DALFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/presentationmodels/IPTCPresentationModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1480,28 +1392,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1098">
           <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
-          <folding>
-            <element signature="e#4892#4893#0" expanded="false" />
-            <element signature="e#4944#4945#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="83" column="14" lean-forward="false" selection-start-line="83" selection-start-column="14" selection-end-line="83" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/PicBusinessLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="50" column="5" lean-forward="false" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1593,15 +1483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2521">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/presentationmodels/PictureListPresentationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1631,7 +1512,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/presentationmodels/CameraPresentationModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="60">
           <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding />
         </state>
@@ -1639,24 +1520,154 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/picdb/PicCameraPresentationModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="912">
+        <state relative-caret-position="1875">
           <caret line="159" column="23" lean-forward="false" selection-start-line="159" selection-start-column="23" selection-end-line="159" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/presentationmodels/PictureListPresentationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/models/PictureModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/function/Predicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../BIF-SWE2.UnitTests/src/BIF/SWE2/unittests/UEB6Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="204" column="0" lean-forward="false" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+        <state relative-caret-position="1346">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/PicPictureModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#525#526#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/PicPhotographerModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/PicCameraModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="32" column="8" lean-forward="false" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding>
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/PicCameraListPresentationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/DALType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" lean-forward="false" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/DALFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uebungen/UEB1Impl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/MockPicture.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/PicBusinessLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/uebungen/UEB6Impl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="255">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/uebungen/UEB3Impl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="26" column="82" lean-forward="false" selection-start-line="26" selection-start-column="82" selection-end-line="26" selection-end-column="82" />
           <folding />
         </state>
       </provider>

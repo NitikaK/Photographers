@@ -4,8 +4,12 @@ import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.UEB6;
 import BIF.SWE2.interfaces.models.PhotographerModel;
 import BIF.SWE2.interfaces.models.PictureModel;
+import picdb.MockPicture;
+import picdb.PicBusinessLayer;
+import picdb.PicPhotographerModel;
+import picdb.PicPictureModel;
 
-public class UEB6Impl implements UEB6 {
+public class  UEB6Impl implements UEB6 {
 
 
 	@Override
@@ -15,18 +19,20 @@ public class UEB6Impl implements UEB6 {
 
 	@Override
 	public BusinessLayer getBusinessLayer() {
-		// TODO Auto-generated method stub
-		return null;
+
+		return new PicBusinessLayer(MockPicture.SINGLE);
 	}
 
 	@Override
-	public PictureModel getEmptyPictureModel() {
-		return null;
+	public PictureModel getEmptyPictureModel()
+	{
+		return new PicPictureModel();
 	}
 
 	@Override
-	public PhotographerModel getEmptyPhotographerModel() {
-		return null;
+	public PhotographerModel getEmptyPhotographerModel()
+	{
+		return new PicPhotographerModel();
 	}
 
 	@Override
