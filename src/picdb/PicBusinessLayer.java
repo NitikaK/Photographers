@@ -93,14 +93,29 @@ public class PicBusinessLayer implements BusinessLayer
                 {
                     PictureModel temp = new PicPictureModel();
                     temp.setFileName(f.getName());
-                    temp.setEXIF(extractEXIF(f.getName()));
-                    temp.setIPTC(extractIPTC(f.getName()));
+
+                    EXIFModel simulatedExif = new PicEXIFModel();
+                    simulatedExif.setMake("NiceCam");
+                    simulatedExif.setExposureTime(23.12);
+                    simulatedExif.setFNumber(23.12);
+                    simulatedExif.setISOValue(23.12);
+                    temp.setEXIF(simulatedExif);
+
+                    IPTCModel simulatedIptc = new PicIPTCModel();
+                    simulatedIptc.setByLine("Hans");
+                    simulatedIptc.setCaption("abab");
+                    simulatedIptc.setCopyrightNotice("no copyright");
+                    simulatedIptc.setHeadline("best picture ever");
+                    simulatedIptc.setKeywords("1nicespic");
+                    temp.setIPTC(simulatedIptc);
+
                     dal.save(temp);
                 }
             }
         }
 
         List<PictureModel> picsFromDb = new ArrayList<>(getPictures(null, null, null, null));
+
         //delete files from the database that do not exist in the directory
         for (PictureModel pic: picsFromDb)
         {

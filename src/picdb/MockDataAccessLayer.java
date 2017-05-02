@@ -27,7 +27,7 @@ public class MockDataAccessLayer implements DataAccessLayer
         createMockData(picType);
     }
 
-    public void createMockData(MockPicture pictureType)
+    private void createMockData(MockPicture pictureType)
     {
         pictureId = 1234;
         photographerId = 1234;
