@@ -18,68 +18,63 @@ public class MockDataAccessLayer implements DataAccessLayer
     private int photographerId;
     private int cameraId;
 
-    public MockDataAccessLayer(MockPicture picType)
+    public MockDataAccessLayer()
     {
         this.pictures = new HashMap<>();
         this.photographers = new HashMap<>();
         this.cameras = new HashMap<>();
 
-        createMockData(picType);
+        createMockData();
     }
 
-    private void createMockData(MockPicture pictureType)
+    private void createMockData()
     {
         pictureId = 1234;
         photographerId = 1234;
         cameraId = 1234;
 
-        switch (pictureType)
+
+        for (int i = 0; i < 10; i++)
         {
-            case LIST:
-                for (int i = 0; i < 10; i++)
-                {
-                    PictureModel mockPic = new PicPictureModel();
-                    mockPic.setFileName("Img" + i + ".jpg");
-                    mockPic.setID(pictureId);
+            PictureModel mockPic = new PicPictureModel();
 
-                    EXIFModel exifMock = new PicEXIFModel();
-                    exifMock.setMake("NiceCam");
-                    exifMock.setExposureTime(23.12);
-                    exifMock.setFNumber(23.12);
-                    exifMock.setISOValue(23.12);
-                    mockPic.setEXIF(exifMock);
+            if (i == 9)
+            {
+                mockPic.setFileName("blume.jpg");
+            }
+            else
+            {
+                mockPic.setFileName("Img" + i + ".jpg");
+            }
 
-                    IPTCModel iptcMock = new PicIPTCModel();
-                    iptcMock.setByLine("Hans");
-                    iptcMock.setCaption("abab");
-                    iptcMock.setCopyrightNotice("no copyright");
-                    iptcMock.setHeadline("best picture ever");
-                    iptcMock.setKeywords("1nicespic");
-                    mockPic.setIPTC(iptcMock);
 
-                    try
-                    {
-                        save(mockPic);
-                    } catch (Exception e)
-                    {
-                        e.printStackTrace();
-                    }
-                }
-                break;
+            mockPic.setID(pictureId);
 
-            case SINGLE:
-                PictureModel blume = new PicPictureModel();
-                blume.setFileName("Blume.jpg");
+            EXIFModel exifMock = new PicEXIFModel();
+            exifMock.setMake("NiceCam");
+            exifMock.setExposureTime(23.12);
+            exifMock.setFNumber(23.12);
+            exifMock.setISOValue(23.12);
+            mockPic.setEXIF(exifMock);
 
-                try
-                {
-                    save(blume);
-                } catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
-                break;
+            IPTCModel iptcMock = new PicIPTCModel();
+            iptcMock.setByLine("Hans");
+            iptcMock.setCaption("abab");
+            iptcMock.setCopyrightNotice("no copyright");
+            iptcMock.setHeadline("best picture ever");
+            iptcMock.setKeywords("1nicespic");
+            mockPic.setIPTC(iptcMock);
+
+            try
+            {
+                save(mockPic);
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+            }
         }
+
+
 
 
         for (int i = 0; i < 10; i++)
@@ -121,7 +116,7 @@ public class MockDataAccessLayer implements DataAccessLayer
 
             for (PictureModel p: pictures.values())
             {
-                if (p.getFileName().equals(s) || p.getIPTC() == iptcModel || p.getEXIF() == exifModel)
+                if (p.getFileName().contains(s) || p.getIPTC() == iptcModel || p.getEXIF() == exifModel)
                 {
                     tempList.add(p);
                 }

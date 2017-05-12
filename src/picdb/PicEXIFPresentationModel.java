@@ -6,7 +6,6 @@ import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.EXIFPresentationModel;
 
 
-
 public class PicEXIFPresentationModel implements EXIFPresentationModel
 {
     private String make;
@@ -35,7 +34,9 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
 
     }
 
-    public PicEXIFPresentationModel(){}
+    public PicEXIFPresentationModel()
+    {
+    }
 
     @Override
     public CameraPresentationModel getCamera()
@@ -96,35 +97,30 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
     @Override
     public ISORatings getISORating()
     {
-        ISORatings isoRating;
         double acceptable;
         double good;
 
         if (this.camera == null)
         {
-            isoRating = ISORatings.NotDefined;
+            return ISORatings.NotDefined;
         }
-        else
+
+        good = this.camera.getISOLimitGood();
+        acceptable = this.camera.getISOLimitAcceptable();
+
+        if (this.isoValue <= 0)
         {
-            good = this.camera.getISOLimitGood();
-            acceptable = this.camera.getISOLimitAcceptable();
-
-            if (this.isoValue == 0)
-            {
-                isoRating = ISORatings.NotDefined;
-            } else if (good >= this.isoValue)
-            {
-                isoRating = ISORatings.Good;
-            } else if (acceptable >= this.isoValue)
-            {
-                isoRating = ISORatings.Acceptable;
-            } else
-            {
-                isoRating = ISORatings.Noisey;
-            }
+            return ISORatings.NotDefined;
+        } else if (good >= this.isoValue)
+        {
+            return ISORatings.Good;
+        } else if (acceptable >= this.isoValue)
+        {
+            return ISORatings.Acceptable;
+        } else
+        {
+            return ISORatings.Noisey;
         }
-
-        return isoRating;
 
     }
 

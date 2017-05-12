@@ -1,6 +1,8 @@
 package picdb;
 	
 import javafx.application.Application;
+import javafx.scene.Parent;
+import javafx.scene.control.SplitPane;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -11,11 +13,12 @@ public class Main extends Application implements BIF.SWE2.interfaces.Application
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			/*
 			FXMLLoader fl = new FXMLLoader();
 	        fl.setLocation(getClass().getResource("Main.fxml"));
 	        fl.load();
 
-	        BorderPane root = (BorderPane)fl.getRoot();
+			SplitPane root = (SplitPane)fl.getRoot();
 			MainController controller = (MainController)fl.getController();
 			
 			controller.setStage(primaryStage);
@@ -24,6 +27,18 @@ public class Main extends Application implements BIF.SWE2.interfaces.Application
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			*/
+
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("Main.fxml"));
+			Parent root = loader.load();
+			primaryStage.setTitle("PicDB");
+			Scene scene = new Scene(root, 600, 400);
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			primaryStage.setScene(scene);
+			primaryStage.setMinWidth(600);
+			primaryStage.setMinHeight(400);
+			primaryStage.show();
+
 		} catch(Exception e) {
 			e.printStackTrace();
 		}

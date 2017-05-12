@@ -24,7 +24,7 @@ public class UEB3Impl implements UEB3 {
     public DataAccessLayer getDataAccessLayer()
     {
         DALFactory dalFactory = new DALFactory();
-        DataAccessLayer mockDAL = dalFactory.getDAL(DALType.MOCK, MockPicture.LIST);
+        DataAccessLayer mockDAL = dalFactory.getDAL(DALType.MOCK);
         return mockDAL;
     }
 

@@ -110,7 +110,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public boolean isValidProducer()
     {
-        if(this.producer == null || this.producer.equals(""))
+        if(this.producer == null || "".equals(this.producer))
         {
             return false;
         }
@@ -120,7 +120,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public boolean isValidMake()
     {
-        if(this.make == null || this.make.equals(""))
+        if(this.make == null || "".equals(this.make))
         {
             return false;
         }
