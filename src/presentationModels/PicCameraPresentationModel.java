@@ -1,4 +1,4 @@
-package picdb;
+package presentationModels;
 
 import BIF.SWE2.interfaces.ISORatings;
 import BIF.SWE2.interfaces.models.CameraModel;
@@ -9,25 +9,11 @@ import java.time.LocalDate;
 
 public class PicCameraPresentationModel implements CameraPresentationModel
 {
-    private int id;
-    private String producer;
-    private String make;
-    private LocalDate boughtOn;
-    private String notes;
-    private int numberOfPictures;
-    private double isoLimitGood;
-    private double isoLimitAcceptable;
-    /*
-    private boolean isValid;
-    private boolean isValidProducer;
-    */
+    private CameraModel camera;
 
     public PicCameraPresentationModel(CameraModel model)
     {
-        this.producer = model.getProducer();
-        this.make = model.getMake();
-        this.isoLimitGood = model.getISOLimitGood();
-        this.isoLimitAcceptable = model.getISOLimitAcceptable();
+        this.camera = model;
     }
 
     public PicCameraPresentationModel()
@@ -39,61 +25,62 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public int getID()
     {
-        return this.id;
+        return this.camera.getID();
     }
 
     @Override
     public String getProducer()
     {
-        return this.producer;
+        return this.camera.getProducer();
     }
 
     @Override
     public void setProducer(String s)
     {
-        this.producer = s;
+        this.camera.setProducer(s);
     }
 
     @Override
     public String getMake()
     {
-        return this.make;
+        return this.camera.getMake();
     }
 
     @Override
     public void setMake(String s)
     {
-        this.make = s;
+        this.camera.setMake(s);
     }
 
     @Override
     public LocalDate getBoughtOn()
     {
-        return this.boughtOn;
+        return this.camera.getBoughtOn();
     }
 
     @Override
     public void setBoughtOn(LocalDate localDate)
     {
-        this.boughtOn = localDate;
+        this.camera.setBoughtOn(localDate);
     }
 
     @Override
     public String getNotes()
     {
-        return this.notes;
+        return this.camera.getNotes();
     }
 
     @Override
     public void setNotes(String s)
     {
-        this.notes = s;
+        this.camera.setNotes(s);
     }
 
     @Override
     public int getNumberOfPictures()
     {
-        return this.numberOfPictures;
+        //todo
+        return 0;
     }
 
     @Override
@@ -110,7 +97,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public boolean isValidProducer()
     {
-        if(this.producer == null || "".equals(this.producer))
+        if(this.camera.getProducer() == null || "".equals(this.camera.getProducer()))
         {
             return false;
         }
@@ -120,7 +107,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public boolean isValidMake()
     {
-        if(this.make == null || "".equals(this.make))
+        if(this.camera.getMake() == null || "".equals(this.camera.getMake()))
         {
             return false;
         }
@@ -130,7 +117,7 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public boolean isValidBoughtOn()
     {
-        if (this.boughtOn != null && this.boughtOn.isAfter(LocalDate.now()))
+        if (this.camera.getBoughtOn() != null && this.camera.getBoughtOn().isAfter(LocalDate.now()))
         {
             return false;
         }
@@ -163,30 +150,31 @@ public class PicCameraPresentationModel implements CameraPresentationModel
     @Override
     public double getISOLimitGood()
     {
-        return this.isoLimitGood;
+        return this.camera.getISOLimitGood();
     }
 
     @Override
     public void setISOLimitGood(double v)
     {
-        this.isoLimitGood = v;
+        this.camera.setISOLimitGood(v);
     }
 
     @Override
     public double getISOLimitAcceptable()
     {
-        return this.isoLimitAcceptable;
+        return this.camera.getISOLimitAcceptable();
     }
 
     @Override
     public void setISOLimitAcceptable(double v)
     {
-        this.isoLimitAcceptable = v;
+        this.camera.setISOLimitGood(v);
     }
 
     @Override
     public ISORatings translateISORating(double v)
     {
+        //todo?
         return null;
     }
 }

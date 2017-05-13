@@ -1,4 +1,4 @@
-package picdb;
+package presentationModels;
 
 import BIF.SWE2.interfaces.ISORatings;
 import BIF.SWE2.interfaces.models.EXIFModel;
@@ -8,30 +8,12 @@ import BIF.SWE2.interfaces.presentationmodels.EXIFPresentationModel;
 
 public class PicEXIFPresentationModel implements EXIFPresentationModel
 {
-    private String make;
-    private double fNumber;
-    private double exposureTime;
-    private double isoValue;
-    private boolean flash;
-    private String exposureProgram;
-    private String exposureProgramResource;
+    private EXIFModel exif;
     private CameraPresentationModel camera;
-    private String isoRatingResource;
 
     public PicEXIFPresentationModel(EXIFModel exif)
     {
-        this.make = exif.getMake();
-        this.fNumber = exif.getFNumber();
-        this.exposureTime = exif.getExposureTime();
-        this.isoValue = exif.getISOValue();
-        this.flash = exif.getFlash();
-
-        if (exif.getExposureProgram() != null)
-        {
-            this.exposureProgram = exif.getExposureProgram().toString();
-        }
-
-
+        this.exif = exif;
     }
 
     public PicEXIFPresentationModel()
@@ -53,37 +35,41 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
     @Override
     public String getMake()
     {
-        return make;
+        return this.exif.getMake();
     }
 
     @Override
     public double getFNumber()
     {
-        return fNumber;
+        return this.exif.getFNumber();
     }
 
     @Override
     public double getExposureTime()
     {
-        return exposureTime;
+        return this.exif.getExposureTime();
     }
 
     @Override
     public double getISOValue()
     {
-        return isoValue;
+        return this.exif.getISOValue();
     }
 
     @Override
     public boolean getFlash()
     {
-        return flash;
+        return this.exif.getFlash();
     }
 
     @Override
     public String getExposureProgram()
     {
-        return exposureProgram;
+        if (this.exif.getExposureProgram() != null)
+        {
+            return this.exif.getExposureProgram().toString();
+        }
+        else return null;
     }
 
     @Override
@@ -99,6 +85,7 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
     {
         double acceptable;
         double good;
+        double isoValue = this.exif.getISOValue();
 
         if (this.camera == null)
         {
@@ -108,13 +95,13 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
         good = this.camera.getISOLimitGood();
         acceptable = this.camera.getISOLimitAcceptable();
 
-        if (this.isoValue <= 0)
+        if (isoValue <= 0)
         {
             return ISORatings.NotDefined;
-        } else if (good >= this.isoValue)
+        } else if (good >= isoValue)
         {
             return ISORatings.Good;
-        } else if (acceptable >= this.isoValue)
+        } else if (acceptable >= isoValue)
         {
             return ISORatings.Acceptable;
         } else
@@ -127,6 +114,7 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
     @Override
     public String getISORatingResource()
     {
-        return isoRatingResource;
+        //todo
+        return "lol";
     }
 }

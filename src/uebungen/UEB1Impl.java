@@ -2,11 +2,13 @@ package uebungen;
 
 import BIF.SWE2.interfaces.models.*;
 import BIF.SWE2.interfaces.presentationmodels.*;
+import models.*;
 import picdb.*;
 import BIF.SWE2.interfaces.Application;
 import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.UEB1;
+import presentationModels.*;
 
 public class UEB1Impl implements UEB1 {
 

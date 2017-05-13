@@ -8,7 +8,13 @@ import BIF.SWE2.interfaces.models.IPTCModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.EXIFPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.IPTCPresentationModel;
+import models.PicCameraModel;
+import models.PicEXIFModel;
+import models.PicIPTCModel;
 import picdb.*;
+import presentationModels.PicCameraPresentationModel;
+import presentationModels.PicEXIFPresentationModel;
+import presentationModels.PicIPTCPresentationModel;
 
 public class UEB4Impl implements UEB4 {
 

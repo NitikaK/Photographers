@@ -1,4 +1,4 @@
-package picdb;
+package presentationModels;
 
 import BIF.SWE2.interfaces.models.IPTCModel;
 import BIF.SWE2.interfaces.presentationmodels.IPTCPresentationModel;
@@ -13,20 +13,15 @@ import java.util.LinkedList;
  */
 public class PicIPTCPresentationModel implements IPTCPresentationModel
 {
-    private String keywords;
-    private String byLine;
-    private String copyrightNotice;
+
+
+
     private Collection<String> copyrightNotices;
-    private String headline;
-    private String caption;
+    private IPTCModel iptc;
 
     public PicIPTCPresentationModel(IPTCModel iptc)
     {
-        this.keywords = iptc.getKeywords();
-        this.byLine = iptc.getByLine();
-        this.copyrightNotice = iptc.getCopyrightNotice();
-        this.headline = iptc.getHeadline();
-        this.caption = iptc.getCaption();
+        this.iptc = iptc;
         this.copyrightNotices = new LinkedList<>();
         copyrightNotices.add("All rights reserved");
         copyrightNotices.add("CC-BY");
@@ -42,37 +37,37 @@ public class PicIPTCPresentationModel implements IPTCPresentationModel
     @Override
     public String getKeywords()
     {
-        return keywords;
+        return this.iptc.getKeywords();
     }
 
     @Override
     public void setKeywords(String keywords)
     {
-        this.keywords = keywords;
+        this.iptc.setKeywords(keywords);
     }
 
     @Override
     public String getByLine()
     {
-        return byLine;
+        return this.iptc.getByLine();
     }
 
     @Override
     public void setByLine(String byLine)
     {
-        this.byLine = byLine;
+        this.iptc.setByLine(byLine);
     }
 
     @Override
     public String getCopyrightNotice()
     {
-        return copyrightNotice;
+        return this.iptc.getCopyrightNotice();
     }
 
     @Override
     public void setCopyrightNotice(String copyrightNotice)
     {
-        this.copyrightNotice = copyrightNotice;
+        this.iptc.setCopyrightNotice(copyrightNotice);
     }
 
     @Override
@@ -84,24 +79,24 @@ public class PicIPTCPresentationModel implements IPTCPresentationModel
     @Override
     public String getHeadline()
     {
-        return headline;
+        return this.iptc.getHeadline();
     }
 
     @Override
     public void setHeadline(String headline)
     {
-        this.headline = headline;
+        this.iptc.setHeadline(headline);
     }
 
     @Override
     public String getCaption()
     {
-        return caption;
+        return this.iptc.getCaption();
     }
 
     @Override
     public void setCaption(String caption)
     {
-        this.caption = caption;
+        this.iptc.setCaption(caption);
     }
 }

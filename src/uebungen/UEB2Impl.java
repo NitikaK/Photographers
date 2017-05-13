@@ -7,7 +7,12 @@ import BIF.SWE2.interfaces.models.PictureModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.MainWindowPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PicturePresentationModel;
+import models.PicCameraModel;
+import models.PicPictureModel;
 import picdb.*;
+import presentationModels.PicCameraPresentationModel;
+import presentationModels.PicMainWindowPresentationModel;
+import presentationModels.PicPicturePresentationModel;
 
 public class UEB2Impl implements UEB2 {
 

@@ -1,4 +1,4 @@
-package picdb;
+package presentationModels;
 
 import BIF.SWE2.interfaces.presentationmodels.CameraListPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;

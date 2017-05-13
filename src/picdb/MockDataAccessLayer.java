@@ -2,6 +2,7 @@ package picdb;
 
 import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.models.*;
+import models.*;
 
 import java.util.Collection;
 import java.util.HashMap;

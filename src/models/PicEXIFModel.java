@@ -1,4 +1,4 @@
-package picdb;
+package models;
 
 import BIF.SWE2.interfaces.ExposurePrograms;
 import BIF.SWE2.interfaces.models.EXIFModel;

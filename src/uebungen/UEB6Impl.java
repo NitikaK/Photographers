@@ -5,8 +5,8 @@ import BIF.SWE2.interfaces.UEB6;
 import BIF.SWE2.interfaces.models.PhotographerModel;
 import BIF.SWE2.interfaces.models.PictureModel;
 import picdb.PicBusinessLayer;
-import picdb.PicPhotographerModel;
-import picdb.PicPictureModel;
+import models.PicPhotographerModel;
+import models.PicPictureModel;
 
 public class  UEB6Impl implements UEB6 {
 

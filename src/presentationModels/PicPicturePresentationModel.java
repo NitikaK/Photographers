@@ -1,6 +1,5 @@
-package picdb;
+package presentationModels;
 
-import BIF.SWE2.interfaces.models.CameraModel;
 import BIF.SWE2.interfaces.models.PictureModel;
 import BIF.SWE2.interfaces.presentationmodels.*;
 
@@ -9,9 +8,7 @@ import BIF.SWE2.interfaces.presentationmodels.*;
  */
 public class PicPicturePresentationModel implements PicturePresentationModel
 {
-    private int id;
-    private String fileName;
-    private String filePath;
+
     private IPTCPresentationModel iptc;
     private EXIFPresentationModel exif;
     private PhotographerPresentationModel photographer;
@@ -26,33 +23,33 @@ public class PicPicturePresentationModel implements PicturePresentationModel
     public PicPicturePresentationModel(PictureModel pictureModel)
     {
         this.pictureModel = pictureModel;
-        this.fileName = pictureModel.getFileName();
-        this.iptc = new PicIPTCPresentationModel();
-        this.exif = new PicEXIFPresentationModel();
+        this.iptc = new PicIPTCPresentationModel(this.pictureModel.getIPTC());
+        this.exif = new PicEXIFPresentationModel(this.pictureModel.getEXIF());
+        this.camera = new PicCameraPresentationModel(this.pictureModel.getCamera());
     }
 
     @Override
     public int getID()
     {
-        return 0;
+        return this.pictureModel.getID();
     }
 
     @Override
     public String getFileName()
     {
-        return this.fileName;
+        return this.pictureModel.getFileName();
     }
 
     @Override
     public String getFilePath()
     {
-        return this.filePath;
+        return "Pictures/" + getFileName();
     }
 
     @Override
     public String getDisplayName()
     {
-        return fileName + " (by hans)";
+        return this.getFileName()+ " (by hans)";
     }
 
     @Override
@@ -76,7 +73,6 @@ public class PicPicturePresentationModel implements PicturePresentationModel
     @Override
     public CameraPresentationModel getCamera()
     {
-        this.camera = new PicCameraPresentationModel(this.pictureModel.getCamera());
         return this.camera;
     }
 }

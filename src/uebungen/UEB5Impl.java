@@ -6,7 +6,11 @@ import BIF.SWE2.interfaces.models.CameraModel;
 import BIF.SWE2.interfaces.models.PhotographerModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PhotographerPresentationModel;
+import models.PicCameraModel;
+import models.PicPhotographerModel;
 import picdb.*;
+import presentationModels.PicCameraPresentationModel;
+import presentationModels.PicPhotographerPresentationModel;
 
 public class UEB5Impl implements UEB5 {
 

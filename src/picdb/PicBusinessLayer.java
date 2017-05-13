@@ -3,6 +3,9 @@ package picdb;
 import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.models.*;
+import models.PicEXIFModel;
+import models.PicIPTCModel;
+import models.PicPictureModel;
 
 import java.io.File;
 import java.util.*;

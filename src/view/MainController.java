@@ -1,4 +1,4 @@
-package picdb;
+package view;
 
 import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.models.PictureModel;
@@ -18,6 +18,7 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import picdb.PicBusinessLayer;
 
 import java.io.File;
 import java.io.IOException;
@@ -46,6 +47,11 @@ public class MainController implements Initializable
             e.printStackTrace();
         }
 
+
+        //
+        // Create the listview for displaying all pictures
+        //
+
         ObservableList<PictureModel> items = null;
         try
         {
@@ -71,7 +77,7 @@ public class MainController implements Initializable
                     setGraphic(null);
                 } else
                 {
-                    File imageFile = new File("Pictures/Img1.jpg");
+                    File imageFile = new File("Pictures/" + picture.getFileName());
 
                     String filelocation = imageFile.toURI().toString();
                     //todo bildpfad

@@ -1,4 +1,4 @@
-package picdb;
+package presentationModels;
 
 import BIF.SWE2.interfaces.presentationmodels.MainWindowPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PictureListPresentationModel;
@@ -6,8 +6,6 @@ import BIF.SWE2.interfaces.presentationmodels.PicturePresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.SearchPresentationModel;
 
 import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
 
 public class PicMainWindowPresentationModel implements MainWindowPresentationModel
 {

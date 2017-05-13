@@ -5,6 +5,7 @@ import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.UEB3;
 import BIF.SWE2.interfaces.presentationmodels.SearchPresentationModel;
 import picdb.*;
+import presentationModels.PicSearchPresentationModel;
 
 public class UEB3Impl implements UEB3 {
 
