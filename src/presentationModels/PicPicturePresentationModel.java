@@ -10,7 +10,7 @@ public class PicPicturePresentationModel implements PicturePresentationModel
 {
 
     private IPTCPresentationModel iptc;
-    private EXIFPresentationModel exif;
+    private PicEXIFPresentationModel exif;
     private PhotographerPresentationModel photographer;
     private CameraPresentationModel camera;
     private PictureModel pictureModel;
@@ -19,6 +19,7 @@ public class PicPicturePresentationModel implements PicturePresentationModel
     {
 
     }
+
 
     public PicPicturePresentationModel(PictureModel pictureModel)
     {
@@ -59,7 +60,7 @@ public class PicPicturePresentationModel implements PicturePresentationModel
     }
 
     @Override
-    public EXIFPresentationModel getEXIF()
+    public PicEXIFPresentationModel getEXIF()
     {
         return this.exif;
     }

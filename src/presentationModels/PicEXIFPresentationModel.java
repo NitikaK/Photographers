@@ -4,12 +4,98 @@ import BIF.SWE2.interfaces.ISORatings;
 import BIF.SWE2.interfaces.models.EXIFModel;
 import BIF.SWE2.interfaces.presentationmodels.CameraPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.EXIFPresentationModel;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleStringProperty;
 
 
 public class PicEXIFPresentationModel implements EXIFPresentationModel
 {
     private EXIFModel exif;
     private CameraPresentationModel camera;
+
+    private SimpleStringProperty makeProperty;
+    private SimpleStringProperty fNumberProperty;
+    private SimpleStringProperty exposureTimeProperty;
+    private SimpleStringProperty isoValueProperty;
+    private SimpleBooleanProperty hasFlashProperty;
+
+    //
+    // getters and setters for properties
+    //
+    public String getMakeProperty()
+    {
+        return makeProperty.get();
+    }
+
+    public SimpleStringProperty makePropertyProperty()
+    {
+        return makeProperty;
+    }
+
+    public void setMakeProperty(String makeProperty)
+    {
+        this.makeProperty.set(makeProperty);
+    }
+
+    public String getfNumberProperty()
+    {
+        return fNumberProperty.get();
+    }
+
+    public SimpleStringProperty fNumberPropertyProperty()
+    {
+        return fNumberProperty;
+    }
+
+    public void setfNumberProperty(String fNumberProperty)
+    {
+        this.fNumberProperty.set(fNumberProperty);
+    }
+
+    public String getExposureTimeProperty()
+    {
+        return exposureTimeProperty.get();
+    }
+
+    public SimpleStringProperty exposureTimePropertyProperty()
+    {
+        return exposureTimeProperty;
+    }
+
+    public void setExposureTimeProperty(String exposureTimeProperty)
+    {
+        this.exposureTimeProperty.set(exposureTimeProperty);
+    }
+
+    public String getIsoValueProperty()
+    {
+        return isoValueProperty.get();
+    }
+
+    public SimpleStringProperty isoValuePropertyProperty()
+    {
+        return isoValueProperty;
+    }
+
+    public void setIsoValueProperty(String isoValueProperty)
+    {
+        this.isoValueProperty.set(isoValueProperty);
+    }
+
+    public boolean isHasFlashProperty()
+    {
+        return hasFlashProperty.get();
+    }
+
+    public SimpleBooleanProperty hasFlashPropertyProperty()
+    {
+        return hasFlashProperty;
+    }
+
+    public void setHasFlashProperty(boolean hasFlashProperty)
+    {
+        this.hasFlashProperty.set(hasFlashProperty);
+    }
 
     public PicEXIFPresentationModel(EXIFModel exif)
     {

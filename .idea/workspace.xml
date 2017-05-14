@@ -2,36 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbc2fbb-81af-4a86-8cc2-b7a55cf4a540" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/About.fxml" afterPath="$PROJECT_DIR$/src/view/About.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/AboutController.java" afterPath="$PROJECT_DIR$/src/view/AboutController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/Main.fxml" afterPath="$PROJECT_DIR$/src/view/Main.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/MainController.java" afterPath="$PROJECT_DIR$/src/view/MainController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicCameraListPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicCameraListPresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicCameraModel.java" afterPath="$PROJECT_DIR$/src/models/PicCameraModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicCameraPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicCameraPresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicEXIFModel.java" afterPath="$PROJECT_DIR$/src/models/PicEXIFModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicEXIFPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicIPTCModel.java" afterPath="$PROJECT_DIR$/src/models/PicIPTCModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicIPTCPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicIPTCPresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicMainWindowPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicMainWindowPresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicPhotographerListPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPhotographerListPresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicPhotographerModel.java" afterPath="$PROJECT_DIR$/src/models/PicPhotographerModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicPhotographerPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPhotographerPresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicPictureListPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicPictureModel.java" afterPath="$PROJECT_DIR$/src/models/PicPictureModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicPicturePresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/PicSearchPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicSearchPresentationModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/picdb/application.css" afterPath="$PROJECT_DIR$/src/view/application.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/About.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/view/AboutController.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/Main.java" afterPath="$PROJECT_DIR$/src/picdb/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uebungen/UEB1Impl.java" afterPath="$PROJECT_DIR$/src/uebungen/UEB1Impl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uebungen/UEB2Impl.java" afterPath="$PROJECT_DIR$/src/uebungen/UEB2Impl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uebungen/UEB3Impl.java" afterPath="$PROJECT_DIR$/src/uebungen/UEB3Impl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uebungen/UEB4Impl.java" afterPath="$PROJECT_DIR$/src/uebungen/UEB4Impl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uebungen/UEB5Impl.java" afterPath="$PROJECT_DIR$/src/uebungen/UEB5Impl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/uebungen/UEB6Impl.java" afterPath="$PROJECT_DIR$/src/uebungen/UEB6Impl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/Main.fxml" afterPath="$PROJECT_DIR$/src/view/Main.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MainController.java" afterPath="$PROJECT_DIR$/src/view/MainController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,17 +30,25 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.6050584">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/view/MainController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="555">
-                  <caret line="61" column="7" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1142">
+                  <caret line="161" column="8" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/picdb/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="390">
+                  <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -69,18 +56,8 @@
           <file leaf-file-name="PicCameraPresentationModel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/presentationModels/PicCameraPresentationModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="582">
+                <state relative-caret-position="977">
                   <caret line="176" column="15" lean-forward="false" selection-start-line="176" selection-start-column="15" selection-end-line="176" selection-end-column="15" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MockDataAccessLayer.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1118">
-                  <caret line="122" column="17" lean-forward="false" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -89,42 +66,18 @@
           <file leaf-file-name="PicPictureListPresentationModel.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="38" column="77" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="77" />
+                <state relative-caret-position="270">
+                  <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="PicPicturePresentationModel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java">
+          <file leaf-file-name="PicPictureModel.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/models/PicPictureModel.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="266">
-                  <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="UEB2Impl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/uebungen/UEB2Impl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="96">
-                  <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/picdb/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+                <state relative-caret-position="431">
+                  <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -133,15 +86,49 @@
           <file leaf-file-name="Main.fxml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/view/Main.fxml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+                <state relative-caret-position="433">
+                  <caret line="112" column="103" lean-forward="true" selection-start-line="112" selection-start-column="103" selection-end-line="112" selection-end-column="103" />
                   <folding>
-                    <marker date="1494623197000" expanded="true" signature="3176:3180" ph="..." />
+                    <marker date="1494791130000" expanded="true" signature="15327:15331" ph="..." />
                   </folding>
                 </state>
               </provider>
               <provider editor-type-id="JavaFX-Scene-Builder">
                 <state />
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="PicEXIFModel.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/models/PicEXIFModel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="315">
+                  <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PicEXIFPresentationModel.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="166">
+                  <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PicPicturePresentationModel.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="945">
+                  <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+                  <folding />
+                </state>
               </provider>
             </entry>
           </file>
@@ -168,7 +155,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/picdb/PhotographerPresentationModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/CameraListPresentationModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/CameraPresentationModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/PictureListPresentationModel.java" />
@@ -211,13 +197,14 @@
         <option value="$PROJECT_DIR$/src/models/PicCameraModel.java" />
         <option value="$PROJECT_DIR$/src/models/PicPictureModel.java" />
         <option value="$PROJECT_DIR$/src/presentationModels/PicSearchPresentationModel.java" />
-        <option value="$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/MainController.java" />
-        <option value="$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java" />
         <option value="$PROJECT_DIR$/src/presentationModels/PicIPTCPresentationModel.java" />
-        <option value="$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java" />
         <option value="$PROJECT_DIR$/src/presentationModels/PicCameraPresentationModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/Main.java" />
+        <option value="$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java" />
+        <option value="$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java" />
+        <option value="$PROJECT_DIR$/src/view/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java" />
         <option value="$PROJECT_DIR$/src/view/MainController.java" />
       </list>
     </option>
@@ -354,98 +341,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SWE2-Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SWE2-Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Pictures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SWE2-Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BIF-SWE2.UnitTests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SWE2-Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BIF-SWE2.UnitTests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="unittests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SWE2-Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BIF-SWE2.Interfaces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SWE2-Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BIF-SWE2.Interfaces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interfaces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SWE2-Java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BIF-SWE2.Interfaces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="interfaces" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="presentationmodels" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -465,6 +360,9 @@
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="picdb" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/view" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/view" />
@@ -954,7 +852,7 @@
       <workItem from="1494002164388" duration="4074000" />
       <workItem from="1494433233397" duration="1663000" />
       <workItem from="1494499428121" duration="872000" />
-      <workItem from="1494500332046" duration="15331000" />
+      <workItem from="1494500332046" duration="33762000" />
     </task>
     <task id="LOCAL-00001" summary="Ue2 MainWindowPresentationModel">
       <created>1489658330506</created>
@@ -1110,16 +1008,17 @@
       <option name="project" value="LOCAL" />
       <updated>1494617359534</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Unit tests green, listview works with model">
+      <created>1494694498378</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1494694498378</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AllUnitTests - 2017.05.04 at 14h 52m 57s.xml">
-      <configuration name="AllUnitTests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="AllUnitTests - 2017.05.09 at 12h 42m 01s.xml">
-      <configuration name="AllUnitTests" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="AllUnitTests - 2017.05.09 at 12h 42m 52s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
@@ -1144,9 +1043,15 @@
     <history-entry file="AllUnitTests - 2017.05.13 at 18h 07m 13s.xml">
       <configuration name="AllUnitTests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="AllUnitTests - 2017.05.14 at 21h 40m 53s.xml">
+      <configuration name="AllUnitTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AllUnitTests - 2017.05.14 at 21h 56m 23s.xml">
+      <configuration name="AllUnitTests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109427000" />
+    <option name="totallyTimeSpent" value="127858000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1171,14 +1076,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11312217" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23604827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12649165" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25394547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25656325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1821798" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23385939" sideWeight="0.49491096" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
@@ -1250,14 +1155,15 @@
     <MESSAGE value="UnitTests Complete.&#10;Modified DALFactory for UE6" />
     <MESSAGE value="Updated Sync function" />
     <MESSAGE value="Initial Gui, Pictures in Listview" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Gui, Pictures in Listview" />
+    <MESSAGE value="Unit tests green, listview works with model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit tests green, listview works with model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="47" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1299,13 +1205,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/presentationmodels/EXIFPresentationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1355,13 +1254,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/AboutController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1463,14 +1355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/PicEXIFModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/PicPhotographerModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1535,14 +1419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1118">
-          <caret line="122" column="17" lean-forward="false" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/presentationModels/PicCameraListPresentationModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1575,22 +1451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/presentationModels/PicCameraPresentationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="176" column="15" lean-forward="false" selection-start-line="176" selection-start-column="15" selection-end-line="176" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/PicIPTCModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/PicCameraModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1599,36 +1459,100 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/uebungen/UEB2Impl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1118">
+          <caret line="122" column="17" lean-forward="false" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/AboutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/PicIPTCModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/presentationModels/PicCameraPresentationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="977">
+          <caret line="176" column="15" lean-forward="false" selection-start-line="176" selection-start-column="15" selection-end-line="176" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BIF-SWE2.Interfaces/src/BIF/SWE2/interfaces/presentationmodels/EXIFPresentationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-228">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/models/PicPictureModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-573">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="431">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/PicEXIFModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="117" column="14" lean-forward="false" selection-start-line="117" selection-start-column="14" selection-end-line="117" selection-end-column="14" />
+        <state relative-caret-position="166">
+          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/uebungen/UEB2Impl.java">
+    <entry file="file://$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        <state relative-caret-position="945">
+          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Main.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        <state relative-caret-position="433">
+          <caret line="112" column="103" lean-forward="true" selection-start-line="112" selection-start-column="103" selection-end-line="112" selection-end-column="103" />
           <folding>
-            <marker date="1494623197000" expanded="true" signature="3176:3180" ph="..." />
+            <marker date="1494791130000" expanded="true" signature="15327:15331" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1638,35 +1562,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="77" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+        <state relative-caret-position="270">
+          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="61" column="7" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1142">
+          <caret line="161" column="8" lean-forward="false" selection-start-line="161" selection-start-column="8" selection-end-line="161" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
