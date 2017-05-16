@@ -50,7 +50,8 @@ public class PicBusinessLayer implements BusinessLayer
         try
         {
             //Update PictureModel and save it to the database
-            PictureModel updatedModel = getPicture(id);
+            PictureModel updatedModel;
+            updatedModel = getPicture(id);
             updatedModel.getEXIF().setMake(make);
             updatedModel.getEXIF().setFNumber(fNumber);
             updatedModel.getEXIF().setExposureTime(exposureTime);
@@ -62,6 +63,25 @@ public class PicBusinessLayer implements BusinessLayer
         {
             e.printStackTrace();
         }
+    }
+
+    public void saveIptc(int id, String keywords, String byLine, String copyrightNotice, String headline, String caption)
+    {
+        try
+        {
+            PictureModel updatedModel;
+            updatedModel = getPicture(id);
+            updatedModel.getIPTC().setKeywords(keywords);
+            updatedModel.getIPTC().setByLine(byLine);
+            updatedModel.getIPTC().setCopyrightNotice(copyrightNotice);
+            updatedModel.getIPTC().setHeadline(headline);
+            updatedModel.getIPTC().setCaption(caption);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
     }
 
     @Override

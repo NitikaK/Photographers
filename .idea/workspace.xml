@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3cbc2fbb-81af-4a86-8cc2-b7a55cf4a540" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/PicPictureModel.java" afterPath="$PROJECT_DIR$/src/models/PicPictureModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/Main.fxml" afterPath="$PROJECT_DIR$/src/view/Main.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MainController.java" afterPath="$PROJECT_DIR$/src/view/MainController.java" />
     </list>
@@ -33,8 +29,8 @@
       <file leaf-file-name="PicBusinessLayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/picdb/PicBusinessLayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="58" column="31" lean-forward="false" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
+            <state relative-caret-position="699">
+              <caret line="75" column="71" lean-forward="true" selection-start-line="75" selection-start-column="71" selection-end-line="76" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -43,8 +39,8 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="185" column="85" lean-forward="true" selection-start-line="185" selection-start-column="85" selection-end-line="185" selection-end-column="85" />
+            <state relative-caret-position="670">
+              <caret line="182" column="39" lean-forward="false" selection-start-line="182" selection-start-column="39" selection-end-line="182" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -113,10 +109,11 @@
       <file leaf-file-name="Main.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/Main.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="171" column="76" lean-forward="false" selection-start-line="171" selection-start-column="76" selection-end-line="171" selection-end-column="76" />
+            <state relative-caret-position="673">
+              <caret line="216" column="71" lean-forward="true" selection-start-line="216" selection-start-column="71" selection-end-line="216" selection-end-column="71" />
               <folding>
-                <marker date="1494947830000" expanded="true" signature="17260:17264" ph="..." />
+                <element signature="n#MenuBar#0;n#children#0;n#VBox#0;n#items#0;n#SplitPane#0;n#!!top" expanded="false" />
+                <marker date="1494948766000" expanded="true" signature="17281:17285" ph="..." />
               </folding>
             </state>
           </provider>
@@ -202,10 +199,10 @@
         <option value="$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java" />
         <option value="$PROJECT_DIR$/src/presentationModels/PicPictureListPresentationModel.java" />
         <option value="$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java" />
-        <option value="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" />
         <option value="$PROJECT_DIR$/src/models/PicPictureModel.java" />
         <option value="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" />
         <option value="$PROJECT_DIR$/src/view/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/picdb/PicBusinessLayer.java" />
         <option value="$PROJECT_DIR$/src/view/MainController.java" />
       </list>
     </option>
@@ -853,7 +850,7 @@
       <workItem from="1494002164388" duration="4074000" />
       <workItem from="1494433233397" duration="1663000" />
       <workItem from="1494499428121" duration="872000" />
-      <workItem from="1494500332046" duration="48207000" />
+      <workItem from="1494500332046" duration="50076000" />
     </task>
     <task id="LOCAL-00001" summary="Ue2 MainWindowPresentationModel">
       <created>1489658330506</created>
@@ -1023,7 +1020,14 @@
       <option name="project" value="LOCAL" />
       <updated>1494791831520</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="gui - implemented save exif function">
+      <created>1494948139460</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1494948139460</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1059,7 +1063,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142303000" />
+    <option name="totallyTimeSpent" value="144172000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1165,7 +1169,8 @@
     <MESSAGE value="Initial Gui, Pictures in Listview" />
     <MESSAGE value="Unit tests green, listview works with model" />
     <MESSAGE value="updated gui (main picture, exif, iptc)" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated gui (main picture, exif, iptc)" />
+    <MESSAGE value="gui - implemented save exif function" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui - implemented save exif function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1527,14 +1532,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/picdb/PicBusinessLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="58" column="31" lean-forward="false" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/presentationModels/PicEXIFPresentationModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1132">
@@ -1569,10 +1566,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Main.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="171" column="76" lean-forward="false" selection-start-line="171" selection-start-column="76" selection-end-line="171" selection-end-column="76" />
+        <state relative-caret-position="673">
+          <caret line="216" column="71" lean-forward="true" selection-start-line="216" selection-start-column="71" selection-end-line="216" selection-end-column="71" />
           <folding>
-            <marker date="1494947830000" expanded="true" signature="17260:17264" ph="..." />
+            <element signature="n#MenuBar#0;n#children#0;n#VBox#0;n#items#0;n#SplitPane#0;n#!!top" expanded="false" />
+            <marker date="1494948766000" expanded="true" signature="17281:17285" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1580,10 +1578,18 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/picdb/PicBusinessLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="75" column="71" lean-forward="true" selection-start-line="75" selection-start-column="71" selection-end-line="76" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="185" column="85" lean-forward="true" selection-start-line="185" selection-start-column="85" selection-end-line="185" selection-end-column="85" />
+        <state relative-caret-position="670">
+          <caret line="182" column="39" lean-forward="false" selection-start-line="182" selection-start-column="39" selection-end-line="182" selection-end-column="39" />
           <folding />
         </state>
       </provider>

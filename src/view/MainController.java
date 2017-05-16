@@ -180,6 +180,7 @@ public class MainController implements Initializable
 
     private void updateIptcInformation()
     {
+        labelIptcSaved.setVisible(false);
         textFieldKeywords.setText(this.selectedPictureModel.getIPTC().getKeywords());
         textFieldByLine.setText(this.selectedPictureModel.getIPTC().getByLine());
         textFieldCopyrightNotice.setText(this.selectedPictureModel.getIPTC().getCopyrightNotice());
@@ -194,9 +195,8 @@ public class MainController implements Initializable
     }
 
 
-    public void saveExif(ActionEvent actionEvent)
+    public void saveExif()
     {
-
         int id = selectedPictureModel.getID();
         String make = textFieldMake.getText();
         double fNumber = Double.parseDouble(textFieldFNumber.getText());
@@ -208,5 +208,20 @@ public class MainController implements Initializable
 
         this.businessLayer.saveExif(id, make, fNumber, exposureTime, isoValue, hasFlash);
         labelExifSaved.setVisible(true);
+    }
+
+    public void saveIptc()
+    {
+        int id = selectedPictureModel.getID();
+        String keywords = textFieldKeywords.getText();
+        String byLine= textFieldByLine.getText();
+        String copyrightNotice = textFieldCopyrightNotice.getText();
+        String headline = textFieldHeadline.getText();
+        String caption = textFieldCaption.getText();
+
+        //todo validate in presentationmodel?
+
+        this.businessLayer.saveIptc(id, keywords, byLine, copyrightNotice, headline, caption);
+        labelIptcSaved.setVisible(true);
     }
 }
