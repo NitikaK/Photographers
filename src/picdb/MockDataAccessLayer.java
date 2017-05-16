@@ -144,9 +144,21 @@ public class MockDataAccessLayer implements DataAccessLayer
     @Override
     public void save(PictureModel pictureModel) throws Exception
     {
-        pictureModel.setID(pictureId);
-        pictureId++;
-        pictures.put(pictureModel.getID(), pictureModel);
+        //
+        // if the picture is not in the db yet, add it, else overwrite it
+        //
+        if (getPicture(pictureModel.getID()) != null)
+        {
+            deletePicture(pictureModel.getID());
+            pictures.put(pictureModel.getID(), pictureModel);
+
+        }
+        else
+        {
+            pictureModel.setID(pictureId);
+            pictureId++;
+            pictures.put(pictureModel.getID(), pictureModel);
+        }
     }
 
     @Override

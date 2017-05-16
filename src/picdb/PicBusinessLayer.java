@@ -45,6 +45,25 @@ public class PicBusinessLayer implements BusinessLayer
         dal.save(pictureModel);
     }
 
+    public void saveExif(int id, String make, double fNumber, double exposureTime, double isoValue, boolean hasFlash)
+    {
+        try
+        {
+            //Update PictureModel and save it to the database
+            PictureModel updatedModel = getPicture(id);
+            updatedModel.getEXIF().setMake(make);
+            updatedModel.getEXIF().setFNumber(fNumber);
+            updatedModel.getEXIF().setExposureTime(exposureTime);
+            updatedModel.getEXIF().setISOValue(isoValue);
+            updatedModel.getEXIF().setFlash(hasFlash);
+            save(updatedModel);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public void deletePicture(int i) throws Exception
     {

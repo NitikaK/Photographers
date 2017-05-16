@@ -24,7 +24,11 @@ public class PicPictureModel implements PictureModel
     @Override
     public int getID()
     {
-        return this.id;
+        if (this.id == null)
+        {
+            return 0;
+        }
+        else return this.id;
     }
 
     @Override

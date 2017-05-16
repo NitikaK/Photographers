@@ -13,6 +13,7 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
     private EXIFModel exif;
     private CameraPresentationModel camera;
 
+    /*
     private SimpleStringProperty makeProperty;
     private SimpleStringProperty fNumberProperty;
     private SimpleStringProperty exposureTimeProperty;
@@ -96,6 +97,7 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
     {
         this.hasFlashProperty.set(hasFlashProperty);
     }
+    */
 
     public PicEXIFPresentationModel(EXIFModel exif)
     {
@@ -203,4 +205,5 @@ public class PicEXIFPresentationModel implements EXIFPresentationModel
         //todo
         return "lol";
     }
+
 }

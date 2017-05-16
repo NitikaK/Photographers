@@ -4,6 +4,7 @@ import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.models.PictureModel;
 import BIF.SWE2.interfaces.presentationmodels.PictureListPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PicturePresentationModel;
+import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -35,7 +36,7 @@ public class MainController implements Initializable
 
 
     private Stage stage;
-    private BusinessLayer businessLayer;
+    private PicBusinessLayer businessLayer;
     private PictureListPresentationModel pictureListPresentationModel;
     private PicturePresentationModel selectedPictureModel;
 
@@ -70,6 +71,10 @@ public class MainController implements Initializable
     private Button buttonSaveExif;
     @FXML
     private Button buttonSaveIptc;
+    @FXML
+    public Label labelIptcSaved;
+    @FXML
+    public Label labelExifSaved;
 
 
     @Override
@@ -95,9 +100,21 @@ public class MainController implements Initializable
 
 
         //
-        // Create bidirectional binding for exif and iptc properties
-        //todo
-        //textFieldMake.textProperty().bindBidirectional(selectedPictureModel.getEXIF().makePropertyProperty());
+        // Only allow doubles or integers to be inserted into a texfield
+        //
+        ChangeListener<String> forceNumberListener = (observable, oldValue, newValue) ->
+        {
+            if (!newValue.matches("([0-9]+(\\.[0-9]*)?|)"))
+            {
+                ((StringProperty) observable).set(oldValue);
+            }
+        };
+
+        textFieldFNumber.textProperty().addListener(forceNumberListener);
+        textFieldFNumber.textProperty().addListener(forceNumberListener);
+        textFieldExposureTime.textProperty().addListener(forceNumberListener);
+        textFieldIsoValue.textProperty().addListener(forceNumberListener);
+
 
 
         //
@@ -147,8 +164,28 @@ public class MainController implements Initializable
         String fileLocation = imageFile.toURI().toString();
         Image image = new Image(fileLocation);
         mainPicture.setImage(image);
+        updateExifInformation();
+        updateIptcInformation();
     }
 
+    private void updateExifInformation()
+    {
+        labelExifSaved.setVisible(false);
+        textFieldMake.setText(this.selectedPictureModel.getEXIF().getMake());
+        textFieldFNumber.setText(String.valueOf(this.selectedPictureModel.getEXIF().getFNumber()));
+        textFieldExposureTime.setText(String.valueOf(this.selectedPictureModel.getEXIF().getExposureTime()));
+        textFieldIsoValue.setText(String.valueOf(this.selectedPictureModel.getEXIF().getISOValue()));
+        checkboxHasFlash.setSelected(this.selectedPictureModel.getEXIF().getFlash());
+    }
+
+    private void updateIptcInformation()
+    {
+        textFieldKeywords.setText(this.selectedPictureModel.getIPTC().getKeywords());
+        textFieldByLine.setText(this.selectedPictureModel.getIPTC().getByLine());
+        textFieldCopyrightNotice.setText(this.selectedPictureModel.getIPTC().getCopyrightNotice());
+        textFieldHeadline.setText(this.selectedPictureModel.getIPTC().getHeadline());
+        textFieldCaption.setText(this.selectedPictureModel.getIPTC().getCaption());
+    }
 
 
     public void setStage(Stage temp)
@@ -160,5 +197,16 @@ public class MainController implements Initializable
     public void saveExif(ActionEvent actionEvent)
     {
 
+        int id = selectedPictureModel.getID();
+        String make = textFieldMake.getText();
+        double fNumber = Double.parseDouble(textFieldFNumber.getText());
+        double exposureTime = Double.parseDouble(textFieldExposureTime.getText());
+        double isoValue = Double.parseDouble(textFieldIsoValue.getText());
+        boolean hasFlash = checkboxHasFlash.isSelected();
+
+        //todo validate in presentationmodel?
+
+        this.businessLayer.saveExif(id, make, fNumber, exposureTime, isoValue, hasFlash);
+        labelExifSaved.setVisible(true);
     }
 }

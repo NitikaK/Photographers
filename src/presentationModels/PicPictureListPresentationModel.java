@@ -3,6 +3,7 @@ package presentationModels;
 import BIF.SWE2.interfaces.models.PictureModel;
 import BIF.SWE2.interfaces.presentationmodels.PictureListPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PicturePresentationModel;
+import models.PicPictureModel;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.paint.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -78,6 +79,19 @@
                                                             <Insets bottom="5.0" />
                                                          </padding>
                                                       </Label>
+                                                      <Label fx:id="labelExifSaved" text="Changes saved!" visible="false">
+                                                         <textFill>
+                                                            <LinearGradient endX="1.0" endY="1.0">
+                                                               <stops>
+                                                                  <Stop color="#e30e0e" />
+                                                                  <Stop color="#da1f1f" offset="1.0" />
+                                                               </stops>
+                                                            </LinearGradient>
+                                                         </textFill>
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
                                                    </children>
                                                    <padding>
                                                       <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -110,7 +124,7 @@
                                                             <Insets bottom="10.0" left="10.0" />
                                                          </VBox.margin>
                                                       </CheckBox>
-                                                      <Button fx:id="buttonSaveExif" onAction="#saveExif" alignment="TOP_LEFT" mnemonicParsing="false" text="Save changes">
+                                                      <Button fx:id="buttonSaveExif" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#saveExif" text="Save changes">
                                                          <VBox.margin>
                                                             <Insets left="25.0" />
                                                          </VBox.margin>
@@ -154,6 +168,16 @@
                                                          <padding>
                                                             <Insets bottom="5.0" />
                                                          </padding>
+                                                      </Label>
+                                                      <Label fx:id="labelIptcSaved" text="Changes saved!" visible="false">
+                                                         <textFill>
+                                                            <LinearGradient endX="1.0" endY="1.0">
+                                                               <stops>
+                                                                  <Stop color="#e30e0e" />
+                                                                  <Stop color="#da1f1f" offset="1.0" />
+                                                               </stops>
+                                                            </LinearGradient>
+                                                         </textFill>
                                                       </Label>
                                                    </children>
                                                    <padding>
