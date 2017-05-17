@@ -39,6 +39,7 @@ public class MainController implements Initializable
     private PicBusinessLayer businessLayer;
     private PictureListPresentationModel pictureListPresentationModel;
     private PicturePresentationModel selectedPictureModel;
+    private ObservableList<PicturePresentationModel> items = null;
 
 
     @FXML
@@ -75,13 +76,14 @@ public class MainController implements Initializable
     public Label labelIptcSaved;
     @FXML
     public Label labelExifSaved;
+    @FXML
+    TextField textFieldSearch;
 
 
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
         this.businessLayer = new PicBusinessLayer();
-        ObservableList<PicturePresentationModel> items = null;
         selectedPictureModel = null;
 
         //
@@ -90,8 +92,6 @@ public class MainController implements Initializable
         try
         {
             businessLayer.sync();
-            this.pictureListPresentationModel = new PicPictureListPresentationModel(businessLayer.getPictures());
-            items = FXCollections.observableArrayList (pictureListPresentationModel.getList());
         }
         catch (Exception e)
         {
@@ -100,7 +100,7 @@ public class MainController implements Initializable
 
 
         //
-        // Only allow doubles or integers to be inserted into a texfield
+        // Only allow doubles or integers to be inserted into a texfield (forceListener)
         //
         ChangeListener<String> forceNumberListener = (observable, oldValue, newValue) ->
         {
@@ -109,20 +109,26 @@ public class MainController implements Initializable
                 ((StringProperty) observable).set(oldValue);
             }
         };
-
         textFieldFNumber.textProperty().addListener(forceNumberListener);
         textFieldFNumber.textProperty().addListener(forceNumberListener);
         textFieldExposureTime.textProperty().addListener(forceNumberListener);
         textFieldIsoValue.textProperty().addListener(forceNumberListener);
 
 
+        //
+        // add listener for new search input
+        //
+        textFieldSearch.textProperty().addListener((observable, oldValue, newValue) ->
+        {
+            updateListview(newValue);
+        });
+
 
         //
-        // Create the listview for displaying all pictures
+        // cell factory for displaying thumbnails in imagelist
         //
         picturesList.setCellFactory(listView -> new ListCell<PicturePresentationModel>()
         {
-
             private ImageView imageView = new ImageView();
 
             @Override
@@ -145,7 +151,19 @@ public class MainController implements Initializable
                 }
             }
         });
-        picturesList.setItems(items);
+
+
+        //
+        // Initially, all pictures are displayed
+        //
+        updateListview("");
+
+
+        //
+        //Set the first picture as initial picture
+        //
+        selectedPictureModel = items.get(0);
+        updateSelectedPicture();
 
 
         //
@@ -158,6 +176,32 @@ public class MainController implements Initializable
         });
     }
 
+
+    //
+    // update the list with the entered searchtext
+    //
+    private void updateListview(String searchText)
+    {
+        //
+        // Set the searchquery, populate the listview with the results
+        //
+        try
+        {
+            this.pictureListPresentationModel = new PicPictureListPresentationModel(businessLayer.getPictures(searchText, null, null, null));
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        items = FXCollections.observableArrayList (pictureListPresentationModel.getList());
+        picturesList.setItems(items);
+
+    }
+
+    //
+    // update all gui elements, when a new picture gets selected from the gui
+    //
     private void updateSelectedPicture()
     {
         File imageFile = new File(selectedPictureModel.getFilePath());
@@ -168,6 +212,10 @@ public class MainController implements Initializable
         updateIptcInformation();
     }
 
+
+    //
+    // update exif-data in the gui
+    //
     private void updateExifInformation()
     {
         labelExifSaved.setVisible(false);
@@ -178,6 +226,10 @@ public class MainController implements Initializable
         checkboxHasFlash.setSelected(this.selectedPictureModel.getEXIF().getFlash());
     }
 
+
+    //
+    // update iptc-data in the gui
+    //
     private void updateIptcInformation()
     {
         labelIptcSaved.setVisible(false);
@@ -189,12 +241,9 @@ public class MainController implements Initializable
     }
 
 
-    public void setStage(Stage temp)
-    {
-        stage = temp;
-    }
-
-
+    //
+    // get all exif-inputs and save the data via businesslayer
+    //
     public void saveExif()
     {
         int id = selectedPictureModel.getID();
@@ -210,6 +259,10 @@ public class MainController implements Initializable
         labelExifSaved.setVisible(true);
     }
 
+
+    //
+    // get all iptc-inputs and save the data via businesslayer
+    //
     public void saveIptc()
     {
         int id = selectedPictureModel.getID();

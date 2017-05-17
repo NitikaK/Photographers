@@ -2,6 +2,7 @@ package presentationModels;
 
 import BIF.SWE2.interfaces.models.PhotographerModel;
 import BIF.SWE2.interfaces.presentationmodels.PhotographerPresentationModel;
+import models.PicPhotographerModel;
 
 import java.time.LocalDate;
 
@@ -10,75 +11,67 @@ import java.time.LocalDate;
  */
 public class PicPhotographerPresentationModel implements PhotographerPresentationModel
 {
-    private int id;
-    private String firstName;
-    private String lastName;
-    private LocalDate birthDay;
-    private String notes;
+    private PhotographerModel model;
 
     public PicPhotographerPresentationModel(){}
 
-    public PicPhotographerPresentationModel(PhotographerModel pModel)
+    public PicPhotographerPresentationModel(PhotographerModel pmodel)
     {
-        this.id = pModel.getID();
-        this.firstName = pModel.getFirstName();
-        this.lastName = pModel.getLastName();
-        this.birthDay = pModel.getBirthDay();
-        this.notes = pModel.getNotes();
+        this.model = pmodel;
     }
 
     @Override
     public int getID()
     {
-        return id;
+        return model.getID();
     }
 
     @Override
     public String getFirstName()
     {
-        return firstName;
+        return model.getFirstName();
     }
 
     @Override
     public void setFirstName(String firstName)
     {
-        this.firstName = firstName;
+        model.setFirstName(firstName);
     }
 
     @Override
     public String getLastName()
     {
-        return lastName;
+        return model.getLastName();
     }
 
     @Override
     public void setLastName(String lastName)
     {
-        this.lastName = lastName;
+        model.setLastName(lastName);
     }
 
     @Override
     public LocalDate getBirthDay()
     {
-        return birthDay;
+        return model.getBirthDay();
     }
 
     @Override
     public void setBirthDay(LocalDate birthDay)
     {
-        this.birthDay = birthDay;
+        model.setBirthDay(birthDay);
     }
 
     @Override
     public String getNotes()
     {
-        return notes;
+        return model.getNotes();
     }
 
     @Override
     public void setNotes(String notes)
     {
-        this.notes = notes;
+        model.setNotes(notes);
     }
 
     @Override
@@ -121,7 +114,7 @@ public class PicPhotographerPresentationModel implements PhotographerPresentatio
     @Override
     public boolean isValidLastName()
     {
-        if(this.lastName != null && !this.lastName.isEmpty())
+        if(getLastName() != null && !getLastName().isEmpty())
         {
             return true;
         }
@@ -132,7 +125,7 @@ public class PicPhotographerPresentationModel implements PhotographerPresentatio
     @Override
     public boolean isValidBirthDay()
     {
-        if (this.birthDay == null || this.birthDay.isBefore(LocalDate.now()))
+        if (getBirthDay() == null || getBirthDay().isBefore(LocalDate.now()))
         {
             return true;
         }
