@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cbc2fbb-81af-4a86-8cc2-b7a55cf4a540" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/Photographers.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/view/PhotographersController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/models/PicPhotographerModel.java" afterPath="$PROJECT_DIR$/src/models/PicPhotographerModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/Main.java" afterPath="$PROJECT_DIR$/src/picdb/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" afterPath="$PROJECT_DIR$/src/picdb/MockDataAccessLayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentationModels/PicPhotographerListPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPhotographerListPresentationModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentationModels/PicPhotographerPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPhotographerPresentationModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicPicturePresentationModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/presentationModels/PicSearchPresentationModel.java" afterPath="$PROJECT_DIR$/src/presentationModels/PicSearchPresentationModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/Main.fxml" afterPath="$PROJECT_DIR$/src/view/Main.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/MainController.java" afterPath="$PROJECT_DIR$/src/view/MainController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -925,7 +911,7 @@
       <workItem from="1496833483197" duration="63000" />
       <workItem from="1496833939063" duration="2498000" />
       <workItem from="1496911374450" duration="3000" />
-      <workItem from="1497977695118" duration="1988000" />
+      <workItem from="1497977695118" duration="2131000" />
     </task>
     <task id="LOCAL-00001" summary="Ue2 MainWindowPresentationModel">
       <created>1489658330506</created>
@@ -1152,7 +1138,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210496000" />
+    <option name="totallyTimeSpent" value="210639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
