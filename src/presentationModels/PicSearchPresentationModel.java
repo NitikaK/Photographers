@@ -2,9 +2,6 @@ package presentationModels;
 
 import BIF.SWE2.interfaces.presentationmodels.SearchPresentationModel;
 
-/**
- * Created by gomgom on 12/03/2017.
- */
 public class PicSearchPresentationModel implements SearchPresentationModel
 {
 

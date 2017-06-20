@@ -3,9 +3,6 @@ package presentationModels;
 import BIF.SWE2.interfaces.models.PictureModel;
 import BIF.SWE2.interfaces.presentationmodels.*;
 
-/**
- * Created by gomgom on 12/03/2017.
- */
 public class PicPicturePresentationModel implements PicturePresentationModel
 {
 
@@ -15,10 +12,7 @@ public class PicPicturePresentationModel implements PicturePresentationModel
     private CameraPresentationModel camera;
     private PictureModel pictureModel;
 
-    public PicPicturePresentationModel()
-    {
-
-    }
+    public PicPicturePresentationModel() {}
 
 
     public PicPicturePresentationModel(PictureModel pictureModel)

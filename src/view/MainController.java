@@ -2,8 +2,11 @@ package view;
 
 import BIF.SWE2.interfaces.BusinessLayer;
 import BIF.SWE2.interfaces.models.PictureModel;
+import BIF.SWE2.interfaces.presentationmodels.PhotographerListPresentationModel;
+import BIF.SWE2.interfaces.presentationmodels.PhotographerPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PictureListPresentationModel;
 import BIF.SWE2.interfaces.presentationmodels.PicturePresentationModel;
+import javafx.beans.Observable;
 import javafx.beans.property.StringProperty;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -13,6 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -21,27 +25,30 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Callback;
 import picdb.PicBusinessLayer;
+import presentationModels.PicPhotographerListPresentationModel;
 import presentationModels.PicPictureListPresentationModel;
 import presentationModels.PicPicturePresentationModel;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable
 {
-
-
-
     private Stage stage;
     private PicBusinessLayer businessLayer;
     private PictureListPresentationModel pictureListPresentationModel;
     private PicturePresentationModel selectedPictureModel;
+    private PhotographerListPresentationModel photographerListPresentationModel;
     private ObservableList<PicturePresentationModel> items = null;
+    private ObservableList<PhotographerPresentationModel> photoItems = null;
 
-
+    @FXML
+    private MenuBar myMenuBar;
     @FXML
     private ImageView mainPicture;
     @FXML
@@ -78,6 +85,18 @@ public class MainController implements Initializable
     public Label labelExifSaved;
     @FXML
     TextField textFieldSearch;
+
+    @FXML
+    private void clickPhotographers(ActionEvent event) throws IOException, InvocationTargetException {
+        System.out.println("You clicked me!");
+        //Parent home_page_parent = FXMLLoader.load(getClass().getResource("Photographers.fxml"));
+        //Scene home_page_scene = new Scene(home_page_parent);
+        Scene home_page_scene = new Scene(FXMLLoader.load(getClass().getResource("Photographers.fxml")));
+        //Stage app_stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Stage app_stage = (Stage) (myMenuBar).getScene().getWindow();
+        app_stage.setScene(home_page_scene);
+        app_stage.show();
+    }
 
 
     @Override
@@ -117,7 +136,7 @@ public class MainController implements Initializable
 
         //
         // add listener for new search input
-        //
+        // TODO improve the search function
         textFieldSearch.textProperty().addListener((observable, oldValue, newValue) ->
         {
             updateListview(newValue);
@@ -277,4 +296,19 @@ public class MainController implements Initializable
         this.businessLayer.saveIptc(id, keywords, byLine, copyrightNotice, headline, caption);
         labelIptcSaved.setVisible(true);
     }
+
+
+    /*@FXML
+    public void clickPhotographers(ActionEvent event) throws Exception {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Photographers.fxml"));
+            Parent parent = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(parent));
+            stage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }*/
+
 }

@@ -4,10 +4,12 @@ import BIF.SWE2.interfaces.DataAccessLayer;
 import BIF.SWE2.interfaces.models.*;
 import models.*;
 
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class MockDataAccessLayer implements DataAccessLayer
 {
@@ -82,6 +84,14 @@ public class MockDataAccessLayer implements DataAccessLayer
         {
             PhotographerModel mockPhotographer = new PicPhotographerModel();
             mockPhotographer.setFirstName("Hans" + new Random().nextInt(100));
+            mockPhotographer.setLastName("Mustermann" + new Random().nextInt(100));
+            mockPhotographer.setNotes("Note Nr. " + new Random().nextInt(100));
+
+            long minDay = LocalDate.of(1970, 1, 1).toEpochDay();
+            long maxDay = LocalDate.of(1990, 12, 31).toEpochDay();
+            long randomDay = ThreadLocalRandom.current().nextLong(minDay, maxDay);
+            LocalDate randomDate = LocalDate.ofEpochDay(randomDay);
+            mockPhotographer.setBirthDay(randomDate);
             try
             {
                 save(mockPhotographer);

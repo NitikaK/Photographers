@@ -6,9 +6,6 @@ import models.PicPhotographerModel;
 
 import java.time.LocalDate;
 
-/**
- * Created by gomgom on 12/03/2017.
- */
 public class PicPhotographerPresentationModel implements PhotographerPresentationModel
 {
     private PhotographerModel model;
@@ -131,5 +128,9 @@ public class PicPhotographerPresentationModel implements PhotographerPresentatio
         }
         else return false;
 
+    }
+
+    public String getName(){
+        return model.getFirstName() + " " +model.getLastName();
     }
 }

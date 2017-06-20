@@ -29,16 +29,17 @@
    <items>
       <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
          <children>
-            <MenuBar>
+            <MenuBar fx:id="myMenuBar" onMouseClicked="#clickPhotographers">
                <menus>
                   <Menu mnemonicParsing="false" text="File">
                      <items>
                         <MenuItem mnemonicParsing="false" text="Close" />
                      </items>
                   </Menu>
-                  <Menu mnemonicParsing="false" text="Edit">
+                  <Menu mnemonicParsing="false" text="View">
                      <items>
-                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <MenuItem mnemonicParsing="false" text="Pictures" />
+                        <MenuItem mnemonicParsing="false" text="Photographers" onAction="#clickPhotographers"/>
                      </items>
                   </Menu>
                   <Menu mnemonicParsing="false" text="Help">

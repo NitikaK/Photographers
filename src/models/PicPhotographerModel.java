@@ -7,9 +7,6 @@ import java.time.LocalDate;
 import java.util.Collection;
 import java.util.LinkedList;
 
-/**
- * Created by gomgom on 12/03/2017.
- */
 public class PicPhotographerModel implements PhotographerModel
 {
     private int id;
